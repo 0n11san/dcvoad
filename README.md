@@ -7,11 +7,11 @@ Informational website for organization wherein clients can view various info (e.
 
 Website that allows personal affiliated w/ VOAD to organize in preparation for upcoming national disaster response exercise. Organizational leadership requires to be able to reach out to these individuals as needed, when Federal gov't ask for it. 
 
-##MVP 1
+## MVP 1
 Survey that hits database and stores persistently
-##MVP 2
+## MVP 2
 Extra org info displayed on website
-##MVP 3
+## MVP 3
 Admin accounts/permissions
 
 ## Key Features
