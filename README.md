@@ -3,7 +3,7 @@
 # DC VOAD (Voluntary Organization Active in Disaster)
 
 ## Description
-Informational website for organization wherein clients can view various info (e.g. membership, photos); Create survey that will populate database (contact ph#; email; roles/emergency speciality); Users should be authenticated (maybe via google authenticate);
+Informational and functional website for organization wherein clients can view various info (e.g. membership, photos); Create survey that will populate database (contact ph#; email; roles/emergency speciality); Users should be authenticated (maybe via google authenticate);
 
 Website that allows personal affiliated w/ VOAD to organize in preparation for upcoming national disaster response exercise. Organizational leadership requires to be able to reach out to these individuals as needed, when Federal gov't ask for it. 
 
@@ -13,6 +13,9 @@ Survey that hits database and stores persistently
 Extra org info displayed on website
 ## MVP 3
 Admin accounts/permissions
+## MVP 4
+Can see publicly 'safe' data
+
 
 ## Key Features
 - Clients can view membership info;
@@ -21,10 +24,10 @@ Admin accounts/permissions
 - Admins should securely be able to pull all info from database (CSV);
 
 ## Tech Used
-SQL / Firebase;
-Survey Analysis Packages;
-Form validation Package?;
-Google Authenticator;
+- SQL / Firebase;
+- Survey Analysis Package;
+- Form validation Package;
+- Google Authenticator;
 
 ## Architecture Diagram
 Cool architecture picture goes here...
@@ -42,4 +45,8 @@ ERD Diagram and or schema goes here.
 Instructions for installing, running tests, seeding the DB, setting up the config file goes here
 
 ## Team Members
-Jen, Jamal, Nathan, Jon
+- ![alt text](placeholder.jpg)
+- Jen (main concept and required data)
+- Jamal (linking front to back)
+- Nathan (front-end)
+- Jon (aesthetics)
