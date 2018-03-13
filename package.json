@@ -1,0 +1,27 @@
+{
+  "name": "dcvoad",
+  "version": "1.0.0",
+  "description": "group project #2",
+  "main": "dcvoad.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perryjen/dcvoad.git"
+  },
+  "author": "perryjen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perryjen/dcvoad/issues"
+  },
+  "homepage": "https://github.com/perryjen/dcvoad#readme",
+  "dependencies": {
+    "express": "^4.16.3",
+    "mysql": "^2.15.0",
+    "node": "^9.8.0"
+  }
+}
