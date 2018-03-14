@@ -20,5 +20,15 @@ CREATE TABLE survey
 	emergency_contact_email varchar(50),
 	question varchar(5) NOT NULL,
 	date TIMESTAMP,
+	Foreign Key (id) References user(id),
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE user
+(
+	id int NOT NULL AUTO_INCREMENT,
+	user_name varchar(255) NOT NULL,
+	password varchar(50),
+	status varchar(255)
 	PRIMARY KEY (id)
 );
