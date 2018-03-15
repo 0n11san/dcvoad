@@ -6,7 +6,8 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-
+  <script type="text/javascript" src="assets/javascript/main.js"></script>
+  </script>
 </head>
 <body>
 
@@ -23,6 +24,16 @@
           </div>
           <div class="panel-body">
             <form role="form">
+
+              <div class="form-group">
+                <label for="name">Please type in the Username you would like to use</label>
+                <input type="text" class="form-control" id="userName">
+              </div>
+
+              <div class="form-group">
+                <label for="name">Please type in the Password you would like to use</label>
+                <input type="text" class="form-control" id="password">
+              </div>
 
               <div class="form-group">
                 <label for="name">Organization Name</label>
@@ -135,38 +146,5 @@
       </div>
     </div>
   </div>
-
-  <script type="text/javascript">
-    $("#add-btn").on("click", function(event) {
-      event.preventDefault();
-
-      var newMember = {
-        name: $("#orgName").val().trim(),
-        site: $("#orgWebsite").val().trim(),
-        number: $("#orgNumber").val().trim(),
-        email: $("#orgEmail").val().trim(),
-        blurb: $("#orgBlurb").val().trim(),
-        siteConsent: $("#siteConsent").val().trim(),
-        pocName: $("#pocName").val().trim(),
-        pocEmail: $("#pocEmail").val().trim(),
-        address: $("#orgAddress").val().trim(),
-        emergPocName: $("#emergPocName").val().trim(),
-        emergPocEmail: $("#emergPocEmail").val().trim(),
-        emergPocNumber1: $("#emergPocNumber1").val().trim(),
-        emergPocNumber2: $("#emergPocNumber2").val().trim(),
-        contactConsent: $("#orgEmail").val().trim(),
-      };
-
-
-
-
-    $.post("/api/new", newCharacter)
-      .done(function(data) {
-        console.log(data);
-        alert("Adding character...");
-      });
-
-    });
-  </script>
 </body>
 </html>
