@@ -5,7 +5,7 @@
 ## Description
 Informational and functional website for organization wherein clients can view various info (e.g. membership, photos); Create survey that will populate database (contact ph#; email; roles/emergency speciality); Users should be authenticated (maybe via google authenticate);
 
-Website that allows personal affiliated w/ VOAD to organize in preparation for upcoming national disaster response exercise. Organizational leadership requires to be able to reach out to these individuals as needed, when Federal gov't ask for it. 
+Website that allows personal affiliated w/ VOAD to organize in preparation for upcoming national disaster response exercise. Organizational leadership requires to be able to reach out to these individuals as needed, when Federal gov't ask for it.
 
 ## MVP 1
 Survey that hits database and stores persistently
@@ -19,7 +19,7 @@ Can see publicly 'safe' data
 
 ## Key Features
 - Clients can view membership info;
-- Become a member; 
+- Become a member;
 - Submit survey to database;
 - Admins should securely be able to pull all info from database (CSV);
 
@@ -31,21 +31,24 @@ Can see publicly 'safe' data
 
 ## Architecture Diagram
 Cool architecture picture goes here...
+- ![alt text](public/assets/media/placeholder/archSS.png)
 
 # UI Mockups
 Mockup pictures go here...
+- ![alt text](public/assets/media/placeholder/UI_1.jpg)
+- ![alt text](public/assets/media/placeholder/UI_2.jpg)
 
 ## API Docs
 Description of API and routes goes here...
 
-## DB 
+## DB
 ERD Diagram and or schema goes here.
 
 ## Getting Started
 Instructions for installing, running tests, seeding the DB, setting up the config file goes here
 
 ## Team Members
-- ![alt text](placeholder.jpg)
+- ![alt text](public/assets/media/placeholder/group.jpg)
 - Jen (main concept and required data)
 - Jamal (linking front to back)
 - Nathan (front-end)
