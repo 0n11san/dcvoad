@@ -1,0 +1,27 @@
+/* enures the overall page is centered */
+body {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+/* a self contained grid for the social icons and links */
+.site-footer-social {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 2em;
+}
+
+/* these next two css rules make it strong that icons appear as greyscale until they're moused-over */
+.site-footer-social a:focus img, .site-footer-social a:hover img {
+  filter: unset;
+}
+
+.site-footer-social img {
+  height: 24px;
+  filter: grayscale(100%) contrast(0) brightness(1.2) sepia(20%) hue-rotate(150deg);
+  transition: all 0.3s ease;
+  width: auto;
+}
