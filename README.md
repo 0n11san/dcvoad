@@ -30,13 +30,11 @@ Can see publicly 'safe' data
 - Google Authenticator;
 
 ## Architecture Diagram
-Cool architecture picture goes here...
-- ![alt text](public/assets/media/placeholder/archSS.png)
+![Architecture Diagram](public/assets/media/archSS.png)
 
 # UI Mockups
-Mockup pictures go here...
-- ![alt text](public/assets/media/placeholder/UI_1.jpg)
-- ![alt text](public/assets/media/placeholder/UI_2.jpg)
+![User Interface 1](public/assets/media/UI_1.jpg)
+![User Interface 2](public/assets/media/UI_2.jpg)
 
 ## API Docs
 Description of API and routes goes here...
@@ -48,7 +46,7 @@ ERD Diagram and or schema goes here.
 Instructions for installing, running tests, seeding the DB, setting up the config file goes here
 
 ## Team Members
-- ![alt text](public/assets/media/placeholder/group.jpg)
+![team pic](public/assets/media/group.jpg)
 - Jen (main concept and required data)
 - Jamal (linking front to back)
 - Nathan (front-end)
