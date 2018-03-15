@@ -1,0 +1,25 @@
+{
+  "name": "dcvoad",
+  "version": "1.0.0",
+  "description": "## Description Informational and functional website for organization wherein clients can view various info (e.g. membership, photos); Create survey that will populate database (contact ph#; email; roles/emergency speciality); Users should be authenticated (maybe via google authenticate);",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/perryjen/dcvoad.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/perryjen/dcvoad/issues"
+  },
+  "homepage": "https://github.com/perryjen/dcvoad#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "express": "^4.16.3"
+  }
+}
