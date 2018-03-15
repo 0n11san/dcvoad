@@ -36,6 +36,7 @@ CREATE TABLE user
 	id int NOT NULL AUTO_INCREMENT,
 	user_name varchar(255) NOT NULL,
 	password varchar(50),
-	status varchar(255)
+	status varchar(255),
+	active BOOLEAN varchar (10),
 	PRIMARY KEY (id)
 );
