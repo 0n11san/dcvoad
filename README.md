@@ -47,7 +47,7 @@ Instructions for installing, running tests, seeding the DB, setting up the confi
 
 ## Team Members
 ![team pic](public/assets/media/group.jpg)
-- Jen (main concept and required data)
+- Jen (main concept and client requirements)
 - Jamal (linking front to back)
-- Nathan (front-end)
-- Jon (aesthetics)
+- Nathan (back-end)
+- Jon (aesthetics and documentation)
