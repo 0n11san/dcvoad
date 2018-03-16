@@ -10,7 +10,7 @@ CREATE TABLE user
 	username varchar(255) NOT NULL,
 	password varchar(50),
 	status varchar(255),
-	active BOOLEAN,
+	active BOOLEAN true,
 	PRIMARY KEY (id)
 );
 

@@ -20,11 +20,11 @@ var survey = {
     });
   },
   delete: function(condition, cb) {
-  orm.delete("survey", condition, function(res) {
-    cb(res);
-  });
-}
+    orm.delete("survey", condition, function(res) {
+      cb(res);
+    });
+  }
 };
 
 // Export the database functions for the controllers
-module.exports = burger;
+module.exports = survey;
