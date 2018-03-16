@@ -24,34 +24,35 @@ $(document).ready(function() {
       };
 
       var newSurvey = {
-        name: $("#orgName").val().trim(),
-        site: $("#orgWebsite").val().trim(),
-        number: $("#orgNumber").val().trim(),
-        email: $("#orgEmail").val().trim(),
-        website: $("#orgWebsite").val().trim(),
-        blurb: $("#orgBlurb").val().trim(),
+        orgName: $("#orgName").val().trim(),
+        orgWebsite: $("#orgWebsite").val().trim(),
+        orgNumber: $("#orgNumber").val().trim(),
+        extension1: $("#extension1").val().trim(),
+        orgEmail: $("#orgEmail").val().trim(),
+        blurb: $("#blurb").val().trim(),
         siteConsent: $("#siteConsent").val().trim(),
-        pocName: $("#pocName").val().trim(),
-        pocEmail: $("#pocEmail").val().trim(),
-        address: $("#orgAddress").val().trim(),
-        city: $("#orgCity").val().trim(),
-        country: $("#orgCountry").val().trim(),
-        post_code: $("#orgPostCode").val().trim(),
-        emergPocName: $("#emergPocName").val().trim(),
-        emergPocNumber1: $("#emergPocNumber1").val().trim(),
-        emergPocNumber1extenstion: $("#emergPocNumber1extension").val().trim(),
-        emergPocNumber2: $("#emergPocNumber2").val().trim(),
-        emergPocNumber2extenstion: $("#emergPocNumber2extension").val().trim(),
-        contactConsent: $("#orgEmail").val().trim(),
+        mpp_con_name: $("#mpp_con_name").val().trim(),
+        mpp_email: $("#mpp_email").val().trim(),
+        address: $("#address").val().trim(),
+        city: $("#city").val().trim(),
+        country: $("#country").val().trim(),
+        post_code: $("#post_code").val().trim(),
+        emergency_contact: $("#emergency_contact").val().trim(),
+        emerg_con_tel_number1: $("#emerg_con_tel_number1").val().trim(),
+        emerg_extension1: $("#emerg_extension1").val().trim(),
+        emerg_con_tel_number2: $("#emerg_con_tel_number2").val().trim(),
+        emerg_extension2: $("#emerg_extension2").val().trim(),
+        emergency_contact_email: $("#emergency_contact_email").val().trim(),
+        contactConsent: $("#contactConsent").val().trim(),
       };
 
 
 
 
-    $.post("/api/new", newCharacter)
-      .done(function(data) {
-        console.log(data);
-        alert("Adding character...");
-      });
+    // $.post("/api/new", newCharacter)
+    //   .done(function(data) {
+    //     console.log(data);
+    //     alert("Adding character...");
+    //   });
     });
 };
