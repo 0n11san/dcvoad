@@ -18,7 +18,7 @@ $(document).ready(function() {
       event.preventDefault();
 
       var newUser = {
-        username: $("#userName").val().trim(),
+        username: $("#username").val().trim(),
         password: $("#password").val().trim(),
         status: userStatus
       };
@@ -35,7 +35,7 @@ $(document).ready(function() {
         mpp_email: $("#mpp_email").val().trim(),
         address: $("#address").val().trim(),
         city: $("#city").val().trim(),
-        country: $("#country").val().trim(),
+        state: $("#state").val().trim(),
         post_code: $("#post_code").val().trim(),
         emergency_contact: $("#emergency_contact").val().trim(),
         emerg_con_tel_number1: $("#emerg_con_tel_number1").val().trim(),
