@@ -10,7 +10,7 @@ connection = mysql.createConnection({
   host: "localhost",
   user: "root",
   // password: process.env.NATE,
-  password: "",
+  password: "B00kw0rm!",
   database: "voad_db"
 });
 };
