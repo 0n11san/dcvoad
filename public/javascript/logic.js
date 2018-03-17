@@ -1,19 +1,33 @@
+// Global variables
+  var userStatus;
+  var siteConsent;
+  var contractConsent;
+
 $(document).ready(function() {
 
-  var userStatus = "user";
+  userStatus = "user";
 
-  // choices
-  var choices = [
-    'Yes',
-    'No'
-  ];
+  // Function to get the site consent answer
+  function getSiteConsent() {
+  var answer1 = document.getElementById("choice1").selectedIndex;
+  if (answer1 === 1) {
+    siteConsent = "Yes";
+  } else {
+    siteConsent = "No"
+  }
+  // console.log(siteConsent);
+  }
 
-  choices.forEach(function(choice) {
-    var select = $('<select class="form-control selector">');
-    var option = $('<option>').text(choice);
-    select.append(option);
-    console.log(option);
-  });
+  // function to get the contract consent answer
+  function getContractConsent() {
+  var answer2 = document.getElementById("choice2").selectedIndex;
+  if (answer2 === 1) {
+    contractConsent = "Yes";
+  } else {
+    contractConsent = "No"
+  }
+  // console.log(contractConsent);
+  }
 
   $("#add-btn").on("click", function(event) {
       event.preventDefault();
@@ -31,7 +45,7 @@ $(document).ready(function() {
         extension1: $("#extension1").val().trim(),
         orgEmail: $("#orgEmail").val().trim(),
         blurb: $("#blurb").val().trim(),
-        siteConsent: $("#siteConsent").val().trim(),
+        siteConsent: siteConsent,
         mpp_con_name: $("#mpp_con_name").val().trim(),
         mpp_email: $("#mpp_email").val().trim(),
         address: $("#address").val().trim(),
@@ -44,8 +58,40 @@ $(document).ready(function() {
         emerg_con_tel_number2: $("#emerg_con_tel_number2").val().trim(),
         emerg_extension2: $("#emerg_extension2").val().trim(),
         emergency_contact_email: $("#emergency_contact_email").val().trim(),
-        contactConsent: $("#contactConsent").val().trim()
+        contactConsent: contractConsent
       };
+
+
+      // var newUser = {
+      //   username: $("#username").val(),
+      //   password: $("#password").val(),
+      //   status: userStatus
+      // };
+      //
+      // var newSurvey = {
+      //   orgName: $("#orgName").val(),
+      //   orgWebsite: $("#orgWebsite").val(),
+      //   orgNumber: $("#orgNumber").val(),
+      //   extension1: $("#extension1").val(),
+      //   orgEmail: $("#orgEmail").val(),
+      //   blurb: $("#blurb").val(),
+      //   siteConsent: siteConsent,
+      //   mpp_con_name: $("#mpp_con_name").val(),
+      //   mpp_email: $("#mpp_email").val(),
+      //   address: $("#address").val(),
+      //   city: $("#city").val(),
+      //   state: $("#state").val(),
+      //   post_code: $("#post_code").val(),
+      //   emergency_contact: $("#emergency_contact").val(),
+      //   emerg_con_tel_number1: $("#emerg_con_tel_number1").val(),
+      //   emerg_extension1: $("#emerg_extension1").val(),
+      //   emerg_con_tel_number2: $("#emerg_con_tel_number2").val(),
+      //   emerg_extension2: $("#emerg_extension2").val(),
+      //   emergency_contact_email: $("#emergency_contact_email").val(),
+      //   contactConsent: contractConsent
+      // };
+
+console.log(newSurvey);
 
   //     // POST data to /api/friends (C in CRUD)
   //     $.post('/api/friends', surveyData, function(data) {
