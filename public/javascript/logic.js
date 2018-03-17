@@ -104,11 +104,11 @@ $(document).ready(function() {
         alert("New Survey has been added...");
       });
 
-    // $.post("/api/user", newUser)
-    //   .done(function(data) {
-    //     console.log(data);
-    //     alert("New User has been added...");
-    //   });
+    $.post("/api/user", newUser)
+      .done(function(data) {
+        console.log(data);
+        alert("New User has been added...");
+      });
 
     //         // Empty out modal and username and link fields.
     // $("#orgName").empty(),

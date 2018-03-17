@@ -2,13 +2,27 @@ var express = require("express");
 
 var router = express.Router();
 
-// Import the model (cat.js) to use its database functions.
+// Import the model (survey.js) to use its database functions.
 var survey = require("../models/survey.js");
+// Import the model (user.js) to use its database functions.
+var user = require("../models/user.js");
+
 
 // Create all our routes and set up logic within those routes where required.
-// Get your user data
+// Get your survey data
 router.get("/", function(req, res) {
   survey.all(function(data) {
+    var hbsObject = {
+      user: data
+    };
+    console.log(hbsObject);
+    res.render("index", hbsObject);
+  });
+});
+
+// Get your user data
+router.get("/", function(req, res) {
+  user.all(function(data) {
     var hbsObject = {
       user: data
     };
@@ -53,7 +67,7 @@ router.get("/about", function(req, res) {
 
 // Post for user
 router.post("/api/user", function(req, res) {
-  survey.create([
+  user.create([
     "username", "password", "status", "active"
   ], [
     req.body.username, req.body.password, req.body.status, req.body.active
@@ -89,7 +103,7 @@ router.put("/api/user/:id", function(req, res) {
 
   console.log("condition", condition);
 
-  survey.update({
+  user.update({
     username: req.body.username
   }, condition, function(result) {
     if (result.changedRows == 0) {
@@ -142,7 +156,7 @@ router.put("/api/survey/:id", function(req, res) {
 router.delete("/api/survey/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  cat.delete(condition, function(result) {
+  survey.delete(condition, function(result) {
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
@@ -156,7 +170,7 @@ router.delete("/api/survey/:id", function(req, res) {
 router.delete("/api/user/:id", function(req, res) {
   var condition = "id = " + req.params.id;
 
-  cat.delete(condition, function(result) {
+  user.delete(condition, function(result) {
     if (result.affectedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
       return res.status(404).end();
