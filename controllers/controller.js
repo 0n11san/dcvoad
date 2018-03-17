@@ -50,28 +50,18 @@ router.get("/about", function(req, res) {
   });
 });
 
-// // Get for all survey data
-// router.get("/", function(req, res) {
-//   survey.all(function(data) {
-//     var hbsObject = {
-//       survey: data
-//     };
-//     console.log(hbsObject);
-//     res.render("index", hbsObject);
-//   });
-// });
 
 // Post for user
-// router.post("/api/user", function(req, res) {
-//   survey.create([
-//     "username", "password", "status", "active"
-//   ], [
-//     req.body.username, req.body.password, req.body.status, req.body.active
-//   ], function(result) {
-//     // Send back the ID of the new quote
-//     res.json({ id: result.insertId });
-//   });
-// });
+router.post("/api/user", function(req, res) {
+  survey.create([
+    "username", "password", "status", "active"
+  ], [
+    req.body.username, req.body.password, req.body.status, req.body.active
+  ], function(result) {
+    // Send back the ID of the new quote
+    res.json({ id: result.insertId });
+  });
+});
 
 // Post for survey
 router.post("/api/survey", function(req, res) {
@@ -94,22 +84,22 @@ router.post("/api/survey", function(req, res) {
 });
 
 // Put for user
-// router.put("/api/user/:id", function(req, res) {
-//   var condition = "id = " + req.params.id;
-//
-//   console.log("condition", condition);
-//
-//   survey.update({
-//     username: req.body.username
-//   }, condition, function(result) {
-//     if (result.changedRows == 0) {
-//       // If no rows were changed, then the ID must not exist, so 404
-//       return res.status(404).end();
-//     } else {
-//       res.status(200).end();
-//     }
-//   });
-// });
+router.put("/api/user/:id", function(req, res) {
+  var condition = "id = " + req.params.id;
+
+  console.log("condition", condition);
+
+  survey.update({
+    username: req.body.username
+  }, condition, function(result) {
+    if (result.changedRows == 0) {
+      // If no rows were changed, then the ID must not exist, so 404
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  });
+});
 
 // Put for survey
 router.put("/api/survey/:id", function(req, res) {

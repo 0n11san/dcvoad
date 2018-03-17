@@ -4,14 +4,14 @@ CREATE DATABASE voad_db;
 
 USE voad_db;
 
--- CREATE TABLE user
--- (
--- 	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
--- 	username varchar(255) NOT NULL,
--- 	password varchar(50),
--- 	status varchar(255),
--- 	active BOOLEAN
--- );
+CREATE TABLE user
+(
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	username varchar(255) NOT NULL,
+	password varchar(50),
+	status varchar(255),
+	active BOOLEAN
+);
 
 CREATE TABLE survey
 (
