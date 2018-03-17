@@ -16,16 +16,34 @@
 
 </head>
 
+<!-- maybe convert this whole file to handlebars -->
 <body>
-  <div id="nav-space">
-    <div id="home-button"></div>
-    <div id="about-button"></div>
-    <div id="login-button"></div>
-    <div id="mem-orgs-button"></div>
+
+<header class="masthead">
+  <div class="logo">
+    <ul class="voad-navbar">
+    <li><a href="/">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="/Register">Login</a></li>
+    <li><a href="#">Member Orgs</a></li>
+    <div></div>
+  </ul>
   </div>
 
-  {{{ body }}}
+{{{ body }}}
 
+</header><!-- .masthead -->
+
+  <!-- <section class="more grid">
+    <div class="more-content">
+      <h2 class="content-title">Subgrid would be nice here</h2>
+      <p>If we need this section, we can use it.<p>
+    </div>
+  </section> -->
+
+</main>
+
+<footer class="colophon">
   <div class="site-footer-social">
     <div>
       <a href="https://twitter.com/nationalvoad/">
@@ -52,10 +70,19 @@
             </a>
     </div>
   </div>
+</footer>
 
-  <div id="team">
-    <!-- //insert team photos here and GH links -->
-  </div>
+<section class="buckets grid">
+  <ul>
+    <li>
+      <img src="https://source.unsplash.com/w3lQVmuK8fw/600x400" alt="">
+      <div class="bucket">
+        <h3 class="bucket-title">Dev Team</h3>
+        <p>Jen, Nathan, Jon, Jamal</p>
+      </div>
+    </li>
+  </ul>
+</section>
 
 </body>
 
