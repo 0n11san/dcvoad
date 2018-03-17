@@ -17,6 +17,17 @@ router.get("/", function(req, res) {
   });
 });
 
+// Render Survey Page
+router.get("/register", function(req, res) {
+  survey.all(function(data) {
+    var hbsObject = {
+      user: data
+    };
+    console.log(hbsObject);
+    res.render("survey", hbsObject);
+  });
+});
+
 // // Get for all survey data
 // router.get("/", function(req, res) {
 //   survey.all(function(data) {
