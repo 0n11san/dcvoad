@@ -11,7 +11,7 @@ connection = mysql.createConnection({
   user: "root",
   // password: process.env.NATE,
   password: "",
-  database: "voad_db"
+  database: "survey_db"
 });
 };
 
