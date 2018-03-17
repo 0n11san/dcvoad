@@ -6,17 +6,16 @@ USE survey_db;
 
 CREATE TABLE user
 (
-	id int NOT NULL AUTO_INCREMENT,
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	username varchar(255) NOT NULL,
 	password varchar(50),
 	status varchar(255),
-	active BOOLEAN true,
-	PRIMARY KEY (id)
+	active BOOLEAN
 );
 
 CREATE TABLE survey
 (
-	id int NOT NULL AUTO_INCREMENT,
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	orgName varchar(255) NOT NULL,
 	orgWebsite varchar(255),
 	orgNumber int(10),
@@ -37,6 +36,5 @@ CREATE TABLE survey
 	emerg_extension2 int(10),
 	emergency_contact_email varchar(50),
 	contactConsent varchar(5) NOT NULL,
-	date TIMESTAMP,
-	PRIMARY KEY (id)
+	date TIMESTAMP
 );
