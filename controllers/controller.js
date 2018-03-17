@@ -17,16 +17,16 @@ router.get("/", function(req, res) {
   });
 });
 
-// Get for all survey data
-router.get("/", function(req, res) {
-  survey.all(function(data) {
-    var hbsObject = {
-      survey: data
-    };
-    console.log(hbsObject);
-    res.render("index", hbsObject);
-  });
-});
+// // Get for all survey data
+// router.get("/", function(req, res) {
+//   survey.all(function(data) {
+//     var hbsObject = {
+//       survey: data
+//     };
+//     console.log(hbsObject);
+//     res.render("index", hbsObject);
+//   });
+// });
 
 // Post for user
 router.post("/api/user", function(req, res) {

@@ -1,8 +1,8 @@
 ### Schema
-DROP DATABASE IF EXISTS survey_db;
-CREATE DATABASE survey_db;
+DROP DATABASE IF EXISTS voad_db;
+CREATE DATABASE voad_db;
 
-USE survey_db;
+USE survey;
 
 CREATE TABLE user
 (
