@@ -28,6 +28,28 @@ router.get("/register", function(req, res) {
   });
 });
 
+// About page
+router.get("/members", function(req, res) {
+  survey.all(function(data) {
+    var hbsObject = {
+      user: data
+    };
+    console.log(hbsObject);
+    res.render("member-orgs", hbsObject);
+  });
+});
+
+// Member page
+router.get("/about", function(req, res) {
+  survey.all(function(data) {
+    var hbsObject = {
+      user: data
+    };
+    console.log(hbsObject);
+    res.render("about", hbsObject);
+  });
+});
+
 // // Get for all survey data
 // router.get("/", function(req, res) {
 //   survey.all(function(data) {
