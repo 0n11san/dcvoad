@@ -1,4 +1,5 @@
 /* enures the overall page is centered */
+
 body {
   display: grid;
   align-items: center;
@@ -6,6 +7,7 @@ body {
 }
 
 /* a self contained grid for the social icons and links */
+
 .site-footer-social {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -15,6 +17,7 @@ body {
 }
 
 /* these next two css rules make it strong that icons appear as greyscale until they're moused-over */
+
 .site-footer-social a:focus img, .site-footer-social a:hover img {
   filter: unset;
 }
@@ -27,6 +30,7 @@ body {
 }
 
 /* styles for generic navbar (potentially change based on user type e.g. unregistered/regular/admin) */
+
 .voad-navbar {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 5fr;
@@ -36,15 +40,19 @@ body {
   color: #f2f2f2;
   text-align: center;
 }
+
 /* Change the color of links on hover */
+
 .voad-navbar a:hover {
-    background-color: #ddd;
-    color: black;
+  background-color: #ddd;
+  color: black;
 }
+
 /* Add a color to the active/current link */
+
 .voad-navbar a.active {
-    background-color: #4CAF50;
-    color: white;
+  background-color: #4CAF50;
+  color: white;
 }
 
 /*--------------------------------------------------------------
@@ -54,198 +62,191 @@ body {
  ----------------------------------------------------------------
  ----------------------------------------------------------------
  --------------------------------------------------------------*/
+
 /* NOTE:
  * Grid/Flex layout stuff starts at line 187.
  * The stuff before is just boring old CSS to make content look not crappy.
  */
+
 /*--------------------------------------------------------------
 CSS Reset
 --------------------------------------------------------------*/
+
 html {
-	font-family: sans-serif;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust:     100%;
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
 }
 
 body {
-	margin: 0;
+  margin: 0;
 }
 
 img {
-	display: block;
-	border: 0;
-	width: 100%;
-	height: auto;
+  display: block;
+  border: 0;
+  width: 100%;
+  height: auto;
 }
-
 
 /*--------------------------------------------------------------
 Accessibility
 --------------------------------------------------------------*/
+
 /* Text meant only for screen readers */
+
 .screen-reader-text {
-	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
-	height: 1px;
-	width: 1px;
-	overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
-.screen-reader-text:hover,
-.screen-reader-text:active,
-.screen-reader-text:focus {
-	background-color: #f1f1f1;
-	border-radius: 3px;
-	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-	clip: auto !important;
-	color: #21759b;
-	display: block;
-	font-size: 14px;
-	font-weight: bold;
-	height: auto;
-	left: 5px;
-	line-height: normal;
-	padding: 15px 23px 14px;
-	text-decoration: none;
-	top: 5px;
-	width: auto;
-	z-index: 100000; /* Above WP toolbar */
+.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000;
+  /* Above WP toolbar */
 }
-
 
 /*--------------------------------------------------------------
 Typography
 --------------------------------------------------------------*/
-body,
-button,
-input,
-select,
-textarea {
-	color: #404040;
-	font-family: 'Helvetica', Arial, sans-serif;
-	font-size: 18px;
-	line-height: 1.5;
+
+body, button, input, select, textarea {
+  color: #404040;
+  font-family: 'Helvetica', Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
 }
 
-h1,
-h2,
-h3 {
-	text-align: center;
-	margin: 0;
-	padding: 1em 0;
+h1, h2, h3 {
+  text-align: center;
+  margin: 0;
+  padding: 1em 0;
 }
 
 p {
-	margin: 0;
-	padding: 1em 0;
+  margin: 0;
+  padding: 1em 0;
 }
-
-
-
 
 /* Promo section */
 
-.JESlogo,
-.JESsite-title {
-	text-align: center;
+.JESlogo, .JESsite-title {
+  text-align: center;
 }
 
 .logo {
-	font-size: 2em;
+  font-size: 2em;
 }
 
 .site-title {
-	margin-top: -1em;
-	margin-bottom: 3em;
+  margin-top: -1em;
+  margin-bottom: 3em;
 }
 
 /* Splash section */
 
 .splash {
-	background: #FFF6E5;
-	padding-bottom: 2em;
+  background: #FFF6E5;
+  padding-bottom: 2em;
 }
 
 .splash-content {
-	padding: 1.5em;
+  padding: 1.5em;
 }
 
 @media screen and (min-width: 600px) {
-	.splash-text {
-		columns: 2;
-		column-gap: 2em;
-	}
-
-	.splash-text p {
-		padding-top: 0;
-	}
+  .splash-text {
+    columns: 2;
+    column-gap: 2em;
+  }
+  .splash-text p {
+    padding-top: 0;
+  }
 }
 
 /* Buckets section */
 
 .buckets {
-	padding: 2em 1em 1em;
-	background: #3E454C;
+  padding: 2em 1em 1em;
+  background: #3E454C;
 }
 
 .buckets ul {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .buckets li {
-	margin-bottom: 1em;
-	background: white;
-	list-style-type: none;
+  margin-bottom: 1em;
+  background: white;
+  list-style-type: none;
 }
 
 .bucket {
-	padding: 1.5em;
+  padding: 1.5em;
 }
 
 /* More section */
 
 .more {
-	padding: 2em;
+  padding: 2em;
 }
 
 /* Twins section */
 
 .twin {
-	padding: 2em;
-	background: #2185C5;
-	color: white;
+  padding: 2em;
+  background: #2185C5;
+  color: white;
 }
 
 .twin:last-of-type {
-	background: #FF7F66;
+  background: #FF7F66;
 }
 
 /* Colophon section */
+
 .JEScolophon {
-	padding: 2em;
-	background: hsl(0, 0%, 10%);
-	color: white;
-	text-align: center;
+  padding: 2em;
+  background: hsl(0, 0%, 10%);
+  color: white;
+  text-align: center;
 }
 
 .JEScolophon a {
-	color: white;
+  color: white;
 }
 
-.JEScolophon a:hover,
-.JEScolophon a:focus {
-	border-bottom: 1px solid white;
+.JEScolophon a:hover, .JEScolophon a:focus {
+  border-bottom: 1px solid white;
 }
 
 /*--------------------------------------------------------------
 If no grid support, limit width to 50em and center align
 --------------------------------------------------------------*/
+
 @supports not (display: grid) {
-	.grid {
-		max-width: 50em;
-		margin: 0 auto;
-	}
+  .grid {
+    max-width: 50em;
+    margin: 0 auto;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -253,18 +254,15 @@ Use flex to create a three-bucket layout
 --------------------------------------------------------------*/
 
 @media screen and (min-width: 700px) {
-	@supports (display: flex) {
-
-		.buckets ul {
-			display: flex;
-			justify-content: space-around;
-		}
-
-		.buckets li {
-			width: 31%;
-		}
-
-	}
+  @supports (display: flex) {
+    .buckets ul {
+      display: flex;
+      justify-content: space-around;
+    }
+    .buckets li {
+      width: 31%;
+    }
+  }
 }
 
 /*--------------------------------------------------------------
@@ -272,33 +270,26 @@ CSS Grid layout for wider screens, when browser supports grid:
 --------------------------------------------------------------*/
 
 @media screen and (min-width: 600px) {
-	/* Layout with CSS Grid */
-	@supports (display: grid) {
-
-		/* Four-column layout. Two center columns have a total max width of 50em: */
-		.grid {
-
-			display: grid;
-			grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
-		}
-
-		/* Center items by placing them in the two center columns: */
-		.splash-content,
-		.more-content,
-		.buckets ul {
-			grid-column: 2/4;
-		}
-
-		/* Use automatic grid placement + span to let each item span two columns:*/
-		.twin,
-		.JEScolophon aside {
-			grid-column: span 2;
-		}
-
-	}
+  /* Layout with CSS Grid */
+  @supports (display: grid) {
+    /* Four-column layout. Two center columns have a total max width of 50em: */
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+    /* Center items by placing them in the two center columns: */
+    .splash-content, .more-content, .buckets ul {
+      grid-column: 2/4;
+    }
+    /* Use automatic grid placement + span to let each item span two columns:*/
+    .twin, .JEScolophon aside {
+      grid-column: span 2;
+    }
+  }
 }
 
 /* enures the overall page is centered */
+
 body {
   display: grid;
   align-items: center;
@@ -306,6 +297,7 @@ body {
 }
 
 /* a self contained grid for the social icons and links */
+
 .site-footer-social {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -315,6 +307,7 @@ body {
 }
 
 /* these next two css rules make it strong that icons appear as greyscale until they're moused-over */
+
 .site-footer-social a:focus img, .site-footer-social a:hover img {
   filter: unset;
 }
@@ -327,12 +320,13 @@ body {
 }
 
 .center {
-	display: grid;
+  display: grid;
   align-items: center;
   justify-content: center;
 }
 
 /* This part effects the About Page */
+
 #aboutOrgInfo {
   display: grid;
   align-items: center;
