@@ -51,7 +51,7 @@ nav{
   color: #fff;
   text-decoration: none;
 }
-.arrow-up{
+/* .arrow-up{
   width: 0;
   height: 0;
   position: absolute;
@@ -61,14 +61,14 @@ nav{
   right: 153px;
   top: 50px;
   display: none;
-}
+} */
 .login-form{
   position: absolute;
   width: 300px;
   height: auto;
   background: #fff;
   right: 61px;
-  top: 62px;
+  top: 116px;
   border-radius: 3px;
   border-bottom: 5px solid gray;
   display: none;

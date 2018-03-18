@@ -33,19 +33,62 @@ body {
 
 .voad-navbar {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 5fr;
-  grid-gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr 2fr 1fr;
+  grid-gap: 2em;
   /* background-color: #333; */
   /* overflow: hidden; */
   color: #f2f2f2;
+  /* text-align: center; */
+  /* align-items: center; */
+  justify-content: center;
+
+  background: #ff7f00;
+  box-shadow: 0px 2px 8px 0px #333;
+  padding-left: 100px;
+}
+
+.voad-navbar>a {
+  align-content: center;
+  display: flex;
+  align-items: center;
   text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.voad-navbar>img {
+  align-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.voad-navbar>div {
+  align-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Change the color of links on hover */
 
 .voad-navbar a:hover {
-  background-color: #ddd;
+  /* background-color: #ddd; */
   color: black;
+}
+
+
+.voad-navbar img{
+  opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+.voad-navbar img:hover{
+  opacity: 1;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
 /* Add a color to the active/current link */
@@ -282,9 +325,9 @@ CSS Grid layout for wider screens, when browser supports grid:
       grid-column: 2/4;
     }
     /* Use automatic grid placement + span to let each item span two columns:*/
-    .twin, .JEScolophon aside {
+    /* .twin, .JEScolophon aside {
       grid-column: span 2;
-    }
+    } */
   }
 }
 
@@ -332,4 +375,14 @@ body {
   align-items: center;
   justify-content: center;
   grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+}
+
+#VOAD-logo {
+  margin-top: 10px;
+  min-height: 5em;
+  min-width: 5em;
+}
+
+#team-names {
+ text-align: center;
 }
