@@ -1,8 +1,8 @@
 body{
-  margin: 0;
+  /* margin: 0;
   padding: 0;
   position: relative;
-  background: #bfc2c2;
+  background: #bfc2c2; */
   /*background-image: url("0B80BAAB-8FF5-4894-B448-A480051E7F28-1-192x128.png");*/
 }
 nav{
@@ -51,7 +51,7 @@ nav{
   color: #fff;
   text-decoration: none;
 }
-.arrow-up{
+/* .arrow-up{
   width: 0;
   height: 0;
   position: absolute;
@@ -61,14 +61,14 @@ nav{
   right: 153px;
   top: 50px;
   display: none;
-}
+} */
 .login-form{
   position: absolute;
   width: 300px;
   height: auto;
   background: #fff;
   right: 61px;
-  top: 62px;
+  top: 116px;
   border-radius: 3px;
   border-bottom: 5px solid gray;
   display: none;
