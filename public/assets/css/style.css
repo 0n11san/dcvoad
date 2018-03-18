@@ -126,7 +126,7 @@ body {
 }
 
 img {
-  display: block;
+  /* display: block; */
   border: 0;
   width: 100%;
   height: auto;
@@ -331,21 +331,13 @@ CSS Grid layout for wider screens, when browser supports grid:
   }
 }
 
-/* enures the overall page is centered */
-
-body {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-}
-
 /* a self contained grid for the social icons and links */
 
 .site-footer-social {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  align-items: center;
-  justify-content: center;
+  /* align-items: center; */
+  /* justify-content: center; */
   grid-gap: 2em;
 }
 
@@ -359,14 +351,18 @@ body {
   height: 24px;
   filter: grayscale(100%) contrast(0) brightness(1.2) sepia(20%) hue-rotate(150deg);
   transition: all 0.3s ease;
-  width: auto;
+  /* width: auto; */
 }
 
-.center {
+/* .center {
   display: grid;
   align-items: center;
   justify-content: center;
-}
+} */
+
+/* .site-footer-social>div>a>img {
+	justify-content: center;
+	} */
 
 /* This part effects the About Page */
 
