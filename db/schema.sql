@@ -4,22 +4,22 @@ CREATE DATABASE voad_db;
 
 USE voad_db;
 
--- CREATE TABLE user
--- (
--- 	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
--- 	username varchar(255) NOT NULL,
--- 	password varchar(50),
--- 	status varchar(255),
--- 	active BOOLEAN
--- );
+CREATE TABLE user
+(
+	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	username varchar(255) NOT NULL,
+	password varchar(50),
+	status varchar(255),
+	active BOOLEAN
+);
 
 CREATE TABLE survey
 (
 	id int NOT NULL AUTO_INCREMENT PRIMARY KEY,
 	orgName varchar(255) NOT NULL,
 	orgWebsite varchar(255),
-	orgNumber int(10),
-	extension1 int(10),
+	orgNumber varchar (20),
+	extension1 varchar (20),
 	orgEmail varchar(50),
 	blurb varchar(1001),
 	siteConsent varchar(5),
@@ -31,9 +31,9 @@ CREATE TABLE survey
 	post_code int(11),
 	emergency_contact varchar(255) NOT NULL,
 	emerg_con_tel_number1 int(10),
-	emerg_extension1 int(10),
-	emerg_con_tel_number2 int(10),
-	emerg_extension2 int(10),
+	emerg_extension1 varchar (20),
+	emerg_con_tel_number2 varchar(20),
+	emerg_extension2 varchar(20),
 	emergency_contact_email varchar(50),
 	contactConsent varchar(5),
 	date TIMESTAMP

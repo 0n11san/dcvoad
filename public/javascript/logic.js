@@ -15,7 +15,7 @@ $(document).ready(function() {
     } else {
       siteConsent = "No"
     }
-    // console.log(siteConsent);
+    console.log(siteConsent);
   }
 
   // function to get the contract consent answer
@@ -26,17 +26,20 @@ $(document).ready(function() {
     } else {
       contactConsent = "No"
     }
-    // console.log(contactConsent);
+    console.log(contactConsent);
   }
 
   $("#add-btn").on("click", function(event) {
     event.preventDefault();
 
-    // var newUser = {
-    //   username: $("#username").val(),
-    //   password: $("#password").val(),
-    //   status: userStatus
-    // };
+    getSiteConsent();
+    getcontactConsent();
+
+    var newUser = {
+      username: $("#username").val(),
+      password: $("#password").val(),
+      status: userStatus
+    };
 
     var newSurvey = {
       orgName: $("#orgName").val(),
@@ -91,6 +94,7 @@ $(document).ready(function() {
     //   contactConsent: contactConsent
     // };
 
+    console.log(newUser);
     console.log(newSurvey);
 
 
@@ -100,11 +104,11 @@ $(document).ready(function() {
         alert("New Survey has been added...");
       });
 
-    // $.post("/api/user", newUser)
-    //   .done(function(data) {
-    //     console.log(data);
-    //     alert("New User has been added...");
-    //   });
+    $.post("/api/user", newUser)
+      .done(function(data) {
+        console.log(data);
+        alert("New User has been added...");
+      });
 
     //         // Empty out modal and username and link fields.
     // $("#orgName").empty(),
