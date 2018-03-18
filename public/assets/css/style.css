@@ -16,7 +16,7 @@ body {
   grid-gap: 2em;
 }
 
-/* these next two css rules make it strong that icons appear as greyscale until they're moused-over */
+/* these next two css rules make it so that icons appear as greyscale until they're moused-over */
 
 .site-footer-social a:focus img, .site-footer-social a:hover img {
   filter: unset;
@@ -107,8 +107,7 @@ body {
  --------------------------------------------------------------*/
 
 /* NOTE:
- * Grid/Flex layout stuff starts at line 187.
- * The stuff before is just boring old CSS to make content look not crappy.
+ * Grid/Flex layout stuff starts here
  */
 
 /*--------------------------------------------------------------
@@ -371,6 +370,7 @@ CSS Grid layout for wider screens, when browser supports grid:
   align-items: center;
   justify-content: center;
   grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+  min-height: 50em;
 }
 
 #VOAD-logo {
@@ -381,4 +381,17 @@ CSS Grid layout for wider screens, when browser supports grid:
 
 #team-names {
  text-align: center;
+}
+
+/* replaces bootstrap CSS for overall survey.handlebars (resolves previous conflicts) */
+#surveyblock {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: 1fr;
+  padding: 2em;
+}
+.form-control {
+  background-color: orange;
+  padding: 1em;
 }
