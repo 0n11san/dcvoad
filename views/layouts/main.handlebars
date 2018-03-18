@@ -11,8 +11,8 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="javascript/logic.js"></script>
 
-<!-- dropDown javascript -->
-<script type="text/javascript" src="javascript/dropDown.js"></script>
+  <!-- dropDown javascript -->
+  <script type="text/javascript" src="javascript/dropDown.js"></script>
 
 
   <!-- /*custom css*/ -->
@@ -22,80 +22,84 @@
 </head>
 
 <!-- maybe convert this whole file to handlebars -->
+
 <body>
 
-<header class="masthead">
-  <div class="JESlogo">
-    <!-- <ul class="voad-navbar">
+  <header class="masthead">
+    <div class="JESlogo">
+      <!-- <ul class="voad-navbar">
       <li><a href="/">Home</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/register">Login</a></li>
       <li><a href="/members">Member Orgs</a></li>
       <div></div>
   </ul> -->
-  <nav>
-    <ul class="voad-navbar">
-      <li><a href="/">Home</a></li>
-      <li><a href="/about">About</a></li>
-      <li><a href="/register">Login</a></li>
-      <li><a href="/members">Member Orgs</a></li>
-      <div><section class="nav-container">
-        <!-- <aside class="logo"><img src="?.png"</aside> -->
-        <aside class="menu">
-          <div class="menu-content">
-            <i class="fa fa-unlock-alt"></i><a href="#" id="login">Login</a> | <i class="fa fa-user"></i><a href="#">Register</a>
-          </div>
-          <div class="arrow-up"></div>
-        </aside>
-        <!-- Dropdown for the login -->
-        <div class="login-form">
-          <form>
-            <label>Username</label>
-            <div>
-              <input type="text" placeholder="Username" required/>
-            </div>
-            <label>Password</label>
-            <div>
-              <input type="password" placeholder="Password" required/>
-            </div>
-            <div>
-              <input type="submit" value="Log In" />
-            </div>
-            <div>
-              <a href="#" style="text-decoration:none;position:relative;top:20px;font-size:16px;color:gray;">Lost Your Password?</a>
-            </div>
-          </form>
-          <form>
-            <!-- Dropdown for the register -->
-            <div class="register-form">
-              <form>
-                <label>Username</label>
-                <div>
-                  <input type="text" placeholder="Username" required/>
+      <nav>
+        <ul class="voad-navbar">
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <!-- <li><a> href="/register">Login</a></li> -->
+          <li><a href="/members">Member Orgs</a></li>
+          <div>
+            <section class="nav-container">
+              <!-- <aside class="logo"><img src="?.png"</aside> -->
+              <aside class="menu">
+                <div class="menu-content">
+                  <i class="fa fa-unlock-alt"></i><a href="#" id="login">Login</a> | <i class="fa fa-user"></i><a href="/register">Register</a>
                 </div>
-                <label>Password</label>
-                <div>
-                  <input type="password" placeholder="Password" required/>
-                </div>
-                <div>
-                  <input type="submit" value="Log In" />
-                </div>
-                <div>
-                  <a href="#" style="text-decoration:none;position:relative;top:20px;font-size:16px;color:gray;">Lost Your Password?</a>
-                </div>
+                <div class="arrow-up"></div>
+              </aside>
+              <!-- Dropdown for the login -->
+              <div class="login-form">
+                <form>
+                  <label>Username</label>
+                  <div>
+                    <input type="text" placeholder="Username" required/>
+                  </div>
+                  <label>Password</label>
+                  <div>
+                    <input type="password" placeholder="Password" required/>
+                  </div>
+                  <div>
+                    <input type="submit" value="Log In" />
+                  </div>
+                  <div>
+                    <a href="#" style="text-decoration:none;position:relative;top:20px;font-size:16px;color:gray;">Lost Your Password?</a>
+                  </div>
+                </form>
+                <form>
+                  <!-- Dropdown for the register -->
+                  <div class="register-form">
+                    <form>
+                      <label>Username</label>
+                      <div>
+                        <input type="text" placeholder="Username" required/>
+                      </div>
+                      <label>Password</label>
+                      <div>
+                        <input type="password" placeholder="Password" required/>
+                      </div>
+                      <div>
+                        <input type="submit" value="Log In" />
+                      </div>
+                      <div>
+                        <a href="#" style="text-decoration:none;position:relative;top:20px;font-size:16px;color:gray;">Lost Your Password?</a>
+                      </div>
 
-              </form>
+                    </form>
+                  </div>
+            </section>
             </div>
-      </section></div>
-    </ul>
+        </ul>
 
-  </nav>
+      </nav>
 
-  </div>
+      </div>
 
-{{{ body }}}
+      {{{ body }}}
 
-</header><!-- .masthead -->
+  </header>
+  <!-- .masthead -->
 
   <!-- <section class="more grid">
     <div class="more-content">
@@ -104,48 +108,48 @@
     </div>
   </section> -->
 
-</main>
+  </main>
 
-<footer class="JEScolophon">
-  <div class="site-footer-social">
-    <div>
-      <a href="https://twitter.com/nationalvoad/">
+  <footer class="JEScolophon">
+    <div class="site-footer-social">
+      <div>
+        <a href="https://twitter.com/nationalvoad/">
               <img alt="twitter" src="assets/media/social-twitter.svg">
               <span class="a11y-sr-only"></span>
             </a>
-    </div>
-    <div>
-      <a href="https://www.facebook.com/NVOAD/">
+      </div>
+      <div>
+        <a href="https://www.facebook.com/NVOAD/">
               <img alt="facebook" src="assets/media/social-facebook.svg">
               <span class="a11y-sr-only"></span>
             </a>
-    </div>
-    <div>
-      <a href="https://www.youtube.com/channel/UCvBA8K70vuSlakwxZNui0yg">
+      </div>
+      <div>
+        <a href="https://www.youtube.com/channel/UCvBA8K70vuSlakwxZNui0yg">
               <img alt="youtube" src="assets/media/social-youtube.svg">
               <span class="a11y-sr-only"></span>
             </a>
-    </div>
-    <div>
-      <a href="https://www.instagram.com/nationalvoad/">
+      </div>
+      <div>
+        <a href="https://www.instagram.com/nationalvoad/">
               <img alt="instagram" src="assets/media/social-instagram.svg">
               <span class="a11y-sr-only"></span>
             </a>
-    </div>
-  </div>
-</footer>
-
-<section class="buckets grid">
-  <ul>
-    <li>
-      <img src="https://source.unsplash.com/w3lQVmuK8fw/600x400" alt="">
-      <div class="bucket">
-        <h3 class="bucket-title">Dev Team</h3>
-        <p>Jen, Nathan, Jon, Jamal</p>
       </div>
-    </li>
-  </ul>
-</section>
+    </div>
+  </footer>
+
+  <section class="buckets grid">
+    <ul>
+      <li>
+        <img src="assets/media/4-foxes.jpg" alt="team pic">
+        <div class="bucket">
+          <h3 class="bucket-title">Dev Team</h3>
+          <p>Jen, Nathan, Jon, Jamal</p>
+        </div>
+      </li>
+    </ul>
+  </section>
 
 </body>
 
