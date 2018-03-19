@@ -9,7 +9,7 @@ connection = mysql.createConnection({
   port: 3306,
   host: "localhost",
   user: "root",
-  password: "n@t3l3@rn",
+  password: "",
   database: "voad_db"
 });
 };
