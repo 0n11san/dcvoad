@@ -98,17 +98,24 @@ $(document).ready(function() {
     console.log(newSurvey);
 
 
+    $.post("/api/user", newUser)
+      .done(function(data) {
+        console.log("*********");
+        console.log(data);
+        createSurvey(data.id);
+        alert("New User has been added...");
+      });
+
+function createSurvey(userid){
+ newSurvey.userid = userid;
+console.log(newSurvey);
     $.post("/api/survey", newSurvey)
       .done(function(data) {
         console.log(data);
         alert("New Survey has been added...");
       });
+};
 
-    $.post("/api/user", newUser)
-      .done(function(data) {
-        console.log(data);
-        alert("New User has been added...");
-      });
 
     //         // Empty out modal and username and link fields.
     // $("#orgName").empty(),

@@ -83,14 +83,14 @@ router.post("/api/survey", function(req, res) {
     "orgName", "orgWebsite", "orgNumber", "extension1", "orgEmail", "blurb",
      "siteConsent", "mpp_con_name", "mpp_email", "address", "city", "state",
       "post_code", "emergency_contact", "emerg_con_tel_number1", "emerg_extension1",
-      "emerg_con_tel_number2", "emerg_extension2", "emergency_contact_email", "contactConsent"
+      "emerg_con_tel_number2", "emerg_extension2", "emergency_contact_email", "contactConsent", "userid"
 
   ], [
     req.body.orgName, req.body.orgWebsite, req.body.orgNumber, req.body.extension1,
      req.body.orgEmail, req.body.blurb, req.body.siteConsent, req.body.mpp_con_name,
      req.body.mpp_email, req.body.address, req.body.city, req.body.state, req.body.post_code,
      req.body.emergency_contact, req.body.emerg_con_tel_number1, req.body.emerg_extension1,
-     req.body.emerg_con_tel_number2, req.body.emerg_extension2, req.body.emergency_contact_email, req.body.contactConsent
+     req.body.emerg_con_tel_number2, req.body.emerg_extension2, req.body.emergency_contact_email, req.body.contactConsent, req.body.userid
   ], function(result) {
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
