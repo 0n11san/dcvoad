@@ -30,11 +30,13 @@ CREATE TABLE survey
 	state varchar(255),
 	post_code int(11),
 	emergency_contact varchar(255) NOT NULL,
-	emerg_con_tel_number1 int(10),
+	emerg_con_tel_number1 varchar(20),
 	emerg_extension1 varchar (20),
 	emerg_con_tel_number2 varchar(20),
 	emerg_extension2 varchar(20),
 	emergency_contact_email varchar(50),
 	contactConsent varchar(5),
-	date TIMESTAMP
+	userid int,
+	date TIMESTAMP,
+	FOREIGN KEY (userid) REFERENCES user(id)
 );
