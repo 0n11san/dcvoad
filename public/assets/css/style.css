@@ -1,3 +1,24 @@
+/*--------------------------------------------------------------
+CSS Reset
+--------------------------------------------------------------*/
+
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  /* display: block; */
+  border: 0;
+  width: 100%;
+  height: auto;
+}
+
 /* enures the overall page is centered */
 
 body {
@@ -54,6 +75,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
+
 }
 
 .voad-navbar>img {
@@ -63,6 +85,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
+
 }
 
 .voad-navbar>div {
@@ -72,6 +95,7 @@ body {
   text-align: center;
   align-items: center;
   justify-content: center;
+
 }
 
 /* Change the color of links on hover */
@@ -110,26 +134,7 @@ body {
  * Grid/Flex layout stuff starts here
  */
 
-/*--------------------------------------------------------------
-CSS Reset
---------------------------------------------------------------*/
 
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-img {
-  /* display: block; */
-  border: 0;
-  width: 100%;
-  height: auto;
-}
 
 /*--------------------------------------------------------------
 Accessibility
@@ -377,6 +382,7 @@ CSS Grid layout for wider screens, when browser supports grid:
   margin-top: 10px;
   min-height: 5em;
   min-width: 5em;
+
 }
 
 #team-names {
