@@ -15,7 +15,9 @@ router.get("/api/test", function(req, res) {
   var data = [
     {name: "Jon"},
     {name: "Patrick"},
-    {name: "Nathan"}
+    {name: "Nathan"},
+    {name: "Jen"},
+    {name: "Jamal"}
   ];
   res.json(data)
 });
