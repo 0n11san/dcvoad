@@ -8,6 +8,23 @@ var survey = require("../models/survey.js");
 var user = require("../models/user.js");
 
 
+//get all DB database
+// Get your survey data
+
+router.get("/api/test", function(req, res) {
+  var data = [
+    {name: "Jon"},
+    {name: "Patrick"},
+    {name: "Nathan"}
+  ];
+  res.json(data)
+});
+
+//new test Page
+router.get("/test", function(req, res) {
+    res.render("test");
+});
+
 // Create all our routes and set up logic within those routes where required.
 // Get your survey data
 router.get("/", function(req, res) {
@@ -92,10 +109,13 @@ router.post("/api/survey", function(req, res) {
      req.body.emergency_contact, req.body.emerg_con_tel_number1, req.body.emerg_extension1,
      req.body.emerg_con_tel_number2, req.body.emerg_extension2, req.body.emergency_contact_email, req.body.contactConsent, req.body.userid
   ], function(result) {
+    console.log(result.affectedRows);
     // Send back the ID of the new quote
     res.json({ id: result.insertId });
   });
 });
+
+
 
 // Put for user
 router.put("/api/user/:id", function(req, res) {
