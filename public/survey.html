@@ -68,7 +68,7 @@
 
             <div class="form-group">
               <label for="role">Organization Website *</label>
-              <input type="text" class="form-control" id="orgWebsite" status="incomplete">
+              <input type="text" class="form-control" id="orgWebsite" status="incomplete" onchange="orgWebsiteAuthen()">
             </div>
 
             <div class="form-group">
@@ -83,7 +83,7 @@
 
             <div class="form-group">
               <label for="force-points">Public Contact Email Address</label>
-              <input type="text" class="form-control" id="orgEmail" status="incomplete">
+              <input type="text" class="form-control" id="orgEmail" status="incomplete" onchange="orgEmailAuthen()">
             </div>
 
             <div class="form-group">
@@ -92,7 +92,7 @@
             </div>
 
             <div class="form-group">
-              <label for="role">I consent to have the above information listed on the DCVOAD website</label>
+              <label for="role">I consent to have the above information listed on the DCVOAD website *</label>
               <select id="choice1" status="incomplete" onchange="getSiteConsent()">
                   <option value="No">No</option>
                   <option value="Yes">Yes</option>
@@ -120,16 +120,16 @@
             </div>
 
             <div class="form-group">
-              <label for="force-points">Meeting Planning Email Address</label>
-              <input type="text" class="form-control" id="mpp_email" status="incomplete">
+              <label for="force-points">Meeting Planning Email Address *</label>
+              <input type="text" class="form-control" id="mpp_email" status="incomplete" onchange="mppEmailAuthen()">
             </div>
 
             <div class="form-group">
-              <label for="force-points">Organization Address</label>
-              <input type="text" class="form-control" id="address" placeholder="Address" status="incomplete">
-              <input type="text" class="form-control" id="city" placeholder="City" status="incomplete">
-              <input type="text" class="form-control" id="state" placeholder="State" status="incomplete">
-              <input type="text" class="form-control" id="post_code" placeholder="Postal Code" status="incomplete">
+              <label for="force-points">Organization Address *</label>
+              <input type="text" class="form-control" id="address" placeholder="Address" status="incomplete" onchange="addressAuthen()">
+              <input type="text" class="form-control" id="city" placeholder="City" status="incomplete" onchange="cityAuthen()">
+              <input type="text" class="form-control" id="state" placeholder="State" status="incomplete" onchange="stateAuthen()">
+              <input type="text" class="form-control" id="post_code" placeholder="Postal Code" status="incomplete" onchange="postCodeAuthen()">
             </div>
 
             <div class="form-group">
@@ -159,11 +159,11 @@
 
             <div class="form-group">
               <label for="force-points">Emergency Contact Email Address</label>
-              <input type="text" class="form-control" id="emergency_contact_email">
+              <input type="text" class="form-control" id="emergency_contact_email" status="complete" onchange="emergConEmailAuthen()">
             </div>
 
             <div class="form-group">
-              <label for="contactConsent">This point of contacts consents to be contacted during official disaster response exercises</label><br>
+              <label for="contactConsent">This point of contacts consents to be contacted during official disaster response exercises *</label><br>
               <select id="choice2" status="incomplete" onchange="getcontactConsent()">
                             <option value"No">No</option>
                             <option value="Yes">Yes</option>
@@ -172,7 +172,7 @@
           </form>
 
           <div class="text-right">
-            <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target="#myModal" enabled><span class="glyphicon glyphicon-fire"></span> Add information to DCVOAD's records</button>
+            <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-fire"></span> Add information to DCVOAD's records</button>
           </div>
         </div>
       </div>
@@ -196,7 +196,6 @@
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
-
     </div>
   </div>
 </body>
