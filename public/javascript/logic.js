@@ -3,6 +3,21 @@ var userStatus;
 var siteConsent;
 var contactConsent;
 
+/////////////////////////////////////////////////////
+//////// Onchange or Environmental Functions////////
+///////////////////////////////////////////////////
+
+
+function showPassword() {
+var showPasswordBox = $("#showPwd");
+var passwordType = $("#password");
+  if(showPasswordBox.is(":checked")) {
+    passwordType.attr('type','text');
+  } else {
+    passwordType.attr('type','password');
+  }
+};
+
 $(document).ready(function() {
 
   userStatus = "user";
