@@ -28,13 +28,14 @@
           <h3 class="panel-title"><strong>Account Creation</strong></h3>
           <form role="form">
             <div class="form-group">
-              <label for="login">Please fill out the survey below. If you have already created an account please login in by clicking the bottom at the top of the screen.</label>
-              <label for="username">Please type in the Username you would like to use</label>
-              <input type="text" class="form-control" id="userName">
+              <label for="login">Please fillout the following questions and infromation. If you have already have an account please login in by clicking the bottom at the top of the screen.</label>
+              <label for="login">* = required</label>
+              <label for="username">Please type in the Username you would like to use *</label>
+              <input type="text" class="form-control" id="userName" status="incomplete" onchange="userAuthen()">
             </div>
             <div class="form-group">
-              <label for="password">Please type in the Password you would like to use</label>
-              <input type="password" class="form-control" id="password" name="password">
+              <label for="password">Please type in the Password you would like to use *</label>
+              <input type="password" class="form-control" id="password" status="incomplete" onchange="passwordAuthen()">
               <input type="checkbox" id="showPwd" onchange="showPassword()">
               <label for="showPwd">show password</label>
             </div>
@@ -57,8 +58,8 @@
           <form role="form">
 
             <div class="form-group">
-              <label for="name">Organization Name</label>
-              <input type="text" class="form-control" id="orgName" pattern="a|b">
+              <label for="name">Organization Name *</label>
+              <input type="text" class="form-control" id="orgName" status="incomplete" onchange="orgNameAuthen()">
             </div>
 
             <div class="form-group">
@@ -78,17 +79,17 @@
 
             <div class="form-group">
               <label for="force-points">Public Contact Email Address</label>
-              <input type="text" class="form-control" id="orgEmail" required>
+              <input type="text" class="form-control" id="orgEmail">
             </div>
 
             <div class="form-group">
               <label for="role">Blurb about Organization (1000 characters or less)</label>
-              <input type="text" class="form-control" id="blurb">
+              <input type="text" class="form-control" id="blurb" status="errorFree" onchange="blurbAuthen()">
             </div>
 
             <div class="form-group">
               <label for="role">I consent to have the above information listed on the DCVOAD website</label>
-              <select id="choice1">
+              <select id="choice1" status="incomplete" onchange="getSiteConsent()">
                   <option value="No">No</option>
                   <option value="Yes">Yes</option>
                 </select>
@@ -110,13 +111,13 @@
           <form role="form">
 
             <div class="form-group">
-              <label for="name">Meeting Planning Point of Contact Name</label>
-              <input type="text" class="form-control" id="mpp_con_name" required>
+              <label for="name">Meeting Planning Point of Contact Name *</label>
+              <input type="text" class="form-control" id="mpp_con_name" status="incomplete" onchange="mppConAuthen()">
             </div>
 
             <div class="form-group">
               <label for="force-points">Meeting Planning Email Address</label>
-              <input type="text" class="form-control" id="mpp_email" required>
+              <input type="text" class="form-control" id="mpp_email">
             </div>
 
             <div class="form-group">
@@ -128,8 +129,8 @@
             </div>
 
             <div class="form-group">
-              <label for="name">Emergency Point of Contact Name</label>
-              <input type="text" class="form-control" id="emergency_contact" required>
+              <label for="name">Emergency Point of Contact Name *</label>
+              <input type="text" class="form-control" id="emergency_contact" status="incomplete" onchange="EmergenConNameAuthen()">
             </div>
 
             <div class="form-group">
@@ -150,8 +151,8 @@
             </div>
 
             <div class="form-group">
-              <label for="contactConsent">This point of contact consents to be contacted during official disaster response exercises</label><br>
-              <select id="choice2" class="form-contol selector">
+              <label for="contactConsent">This point of contacts consents to be contacted during official disaster response exercises</label><br>
+              <select id="choice2" status="incomplete" onchange="getcontactConsent()">
                             <option value"No">No</option>
                             <option value="Yes">Yes</option>
                           </select>
@@ -164,7 +165,7 @@
           <h1 id="draftErrorMessage"></h1>
 
           <div class="text-right">
-            <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-fire"></span> Add information to DCVOAD's records</button>
+            <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target="#myModal" enabled><span class="glyphicon glyphicon-fire"></span> Add information to DCVOAD's records</button>
           </div>
         </div>
       </div>
@@ -179,10 +180,10 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Modal Header</h4>
+          <h4 class="modal-title"></h4>
         </div>
         <div class="modal-body">
-          <p>Some text in the modal.</p>
+          <p id="message"></p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
