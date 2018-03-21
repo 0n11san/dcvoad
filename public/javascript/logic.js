@@ -18,8 +18,6 @@ function userAuthen() {
     userinput.attr('status', 'incomplete');
     userinput.css('border', '2px dashed red');
   }
-  var status = userinput.attr('status');
-  console.log(status);
 };
 
 function showPassword() {
@@ -27,10 +25,7 @@ var showPasswordBox = $("#showPwd");
 var passwordType = $("#password");
   if(showPasswordBox.is(":checked")) {
     passwordType.attr('type','text');
-  } else if (passwordTypeLength >= 8 && passwordTypeLength <=16){
-      passwordType.attr('status', 'complete');
-      passwordType.css('border', '2px dashed green');
-    } else {
+  } else {
     passwordType.attr('type','password');
   }
 };
@@ -49,6 +44,35 @@ if (passwordTypeLength >= 8 && passwordTypeLength <=16) {
 }
 };
 
+function orgNameAuthen() {
+  var orgInput = $("#orgName");
+  var orgInputlength = $("#orgName").val().length;
+  if (orgInputlength > 0 && orgInputlength <=50) {
+    orgInput.attr('status', 'complete');
+    orgInput.css('border', '2px dashed green');
+  } else {
+    $("#message").html("Please fill out the Organization Name section in order to move forward.");
+    $('#myModal').modal("show");
+    orgInput.attr('status', 'incomplete');
+    orgInput.css('border', '2px dashed red');
+  }
+};
+
+function blurbAuthen() {
+  var blurbInput = $("#blurb");
+  var blurbInputlength = $("#blurb").val().length;
+  if (blurbInputlength <=1000) {
+    blurbInput.attr('status', 'errorFree');
+    blurbInput.css('border', '2px dashed green');
+  } else {
+    $("#message").html("Your Blurb has too many character. Max length in 1000. Please edit and try again.");
+    $('#myModal').modal("show");
+    blurbInput.attr('status', 'error');
+    blurbInput.css('border', '2px dashed red');
+  }
+};
+
+
 // Function to get the site consent answer
 function getSiteConsent() {
   var answer1 = document.getElementById("choice1").selectedIndex;
@@ -65,6 +89,34 @@ function getSiteConsent() {
     $('#myModal').modal("show");
   }
  }
+
+ function mppConAuthen() {
+   var mppConInput = $("#mpp_con_name");
+   var mppConInputlength = $("#mpp_con_name").val().length;
+   if (mppConInputlength > 0 && mppConInputlength <=50) {
+     mppConInput.attr('status', 'complete');
+     mppConInput.css('border', '2px dashed green');
+   } else {
+     $("#message").html("Please fill out the Meeting Planning Point of Contact Name section in order to move forward.");
+     $('#myModal').modal("show");
+     mppConInput.attr('status', 'incomplete');
+     mppConInput.css('border', '2px dashed red');
+   }
+ };
+
+ function EmergenConNameAuthen() {
+   var emergConInput = $("#emergency_contact");
+   var emergConInputlength = $("#emergency_contact").val().length;
+   if (emergConInputlength > 0 && emergConInputlength <=50) {
+     emergConInput.attr('status', 'complete');
+     emergConInput.css('border', '2px dashed green');
+   } else {
+     $("#message").html("Please fill out the Emergency Contact Name section in order to move forward.");
+     $('#myModal').modal("show");
+     emergConInput.attr('status', 'incomplete');
+     emergConInput.css('border', '2px dashed red');
+   }
+ };
 
  // function to get the contract consent answer
  function getcontactConsent() {
@@ -93,13 +145,18 @@ function submittingNewInfo() {
 
 
 // Status variables
-var usernameStatus = userinput.attr('status');
-var passwordStatus = passwordType.attr('status');
-var siteConsentStatus = answer1Id.attr('status');
-var contactConsentStatus = answer2Id.attr('status');
+var usernameStatus = $("#userName").attr('status');
+var passwordStatus = $("#password").attr('status');
+var orgInputStatus = $("#orgName").attr('status');
+var blurbStatus = $("#blurb").attr('status');
+var siteConsentStatus = $("#choice1").attr('status');
+var mppContactNameStatus = $("#mpp_con_name").attr('status');
+var emergencyContactNameStatus = $("#emergency_contact").attr('status');
+var contactConsentStatus = $("#choice2").attr('status');
 
-
-if (usernameStatus === 'complete' && passwordStatus === 'complete' && siteConsentStatus === 'complete' && contactConsentStatus === 'complete') {
+// if all the status are complete and blurb is errorFree then submit will be enabled and submit to the database.
+if (usernameStatus && passwordStatus && orgInputStatus && siteConsentStatus
+   && mppContactNameStatus && emergencyContactNameStatus && contactConsentStatus === 'complete' && blurbStatus === 'errorFree') {
 
 }
 
