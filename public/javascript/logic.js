@@ -6,7 +6,19 @@ var contactConsent;
 /////////////////////////////////////////////////////
 //////// Onchange or Environmental Functions////////
 ///////////////////////////////////////////////////
-
+function userAuthen() {
+  var userinput = $("#userName");
+  var userinputlength = $("#userName").val().length;
+  if (userinputlength >= 6 && userinputlength <=10) {
+    userinput.attr('status', 'complete');
+    userinput.css('border', '2px dashed green');
+  } else {
+    $("#message").html("Usernames must be atleast 6 characters long and cannot be longer than 10 characters. Please try again");
+    $('#myModal').modal("show");
+    userinput.attr('status', 'incomplete');
+    userinput.css('border', '2px dashed red');
+  }
+};
 
 function showPassword() {
 var showPasswordBox = $("#showPwd");
@@ -80,7 +92,8 @@ function submittingNewInfo() {
     .done(function(data) {
       console.log("*********");
       console.log(data);
-      alert("New User has been added...");
+      $("#message").html("New User has been added...");
+      $('#myModal').modal("show");
     });
 
   function createSurvey(userid) {
@@ -88,7 +101,8 @@ function submittingNewInfo() {
     $.post("/api/survey", newSurvey)
       .done(function(data) {
         console.log(data);
-        alert("New Survey has been added...");
+        $("#message").html("New Survey has been added...");
+        $('#myModal').modal("show");
       });
   };
 };
@@ -132,7 +146,8 @@ function submittingNewInfo() {
       .done(function(data) {
         console.log("*********");
         console.log(data);
-        alert("New User has been added...");
+        $("#message").html("New User has been added...");
+        $('#myModal').modal("show");
       });
 
     function createSurvey(userid) {
@@ -140,7 +155,8 @@ function submittingNewInfo() {
       $.post("/api/survey", newSurvey)
         .done(function(data) {
           console.log(data);
-          alert("New Survey has been added...");
+          $("#message").html("New Survey has been added...");
+          $('#myModal').modal("show");
         });
     };
   });

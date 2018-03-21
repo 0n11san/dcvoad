@@ -406,10 +406,10 @@ CSS Grid layout for wider screens, when browser supports grid:
 Input Validation Survey Inputs:
 --------------------------------------------------------------*/
 
-input:invalid {
+/* input:invalid {
   border: 2px dashed red;
 }
 
-input:valid {
-  border: 2px solid black;
-}
+input:complete {
+  border: 2px dashed green;
+} */
