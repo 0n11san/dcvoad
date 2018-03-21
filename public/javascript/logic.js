@@ -169,10 +169,12 @@ function emerg2NumberAuthen() {
   console.log(emerg2NumberValue);
   var phoneNumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
   if (emerg2NumberValue.match(phoneNumber)) {
+    emerg2Number.attr('status', 'complete');
     emerg2Number.css('border', '2px dashed green');
   } else {
     $("#message").html("Phone Number did not match the format of XXX.XXX.XXXX. Please correct.");
     $('#myModal').modal("show");
+    emerg2Number.attr('status', 'incomplete');
     emerg2Number.css('border', '2px dashed red');
   }
 };
@@ -181,10 +183,12 @@ function emergExt1Authen() {
   var emergExtInput = $("#emerg_extension1");
   var emergExtlength = $("#emerg_extension1").val().length;
   if (emergExtlength > 0 && emergExtlength <= 20) {
+    emergExtInput.attr('status', 'complete');
     emergExtInput.css('border', '2px dashed green');
   } else {
     $("#message").html("The extension you have entered it too long. Max 20 characters.");
     $('#myModal').modal("show");
+    emergExtInput.attr('status', 'complete');
     emergExtInput.css('border', '2px dashed red');
   }
 };
@@ -193,10 +197,12 @@ function emergExt2Authen() {
   var emergExtInput = $("#emerg_extension2");
   var emergExtlength = $("#emerg_extension2").val().length;
   if (emergExtlength > 0 && emergExtlength <= 20) {
+    emergExtInput.attr('status', 'complete');
     emergExtInput.css('border', '2px dashed green');
   } else {
     $("#message").html("The extension you have entered it too long. Max 20 characters.");
     $('#myModal').modal("show");
+    emergExtInput.attr('status', 'complete');
     emergExtInput.css('border', '2px dashed red');
   }
 };
@@ -231,10 +237,18 @@ $(document).ready(function() {
     var usernameStatus = $("#userName").attr('status');
     var passwordStatus = $("#password").attr('status');
     var orgInputStatus = $("#orgName").attr('status');
+    var orgWebsiteStatus = $("#orgWebsite").attr('status');
     var publicContactNumStatus = $("#orgNumber").attr('status');
+    var extension1Status = $("#extension1").attr('status');
+    var emailStatus = $("#orgEmail").attr('status');
     var blurbStatus = $("#blurb").attr('status');
     var siteConsentStatus = $("#choice1").attr('status');
     var mppContactNameStatus = $("#mpp_con_name").attr('status');
+    var mppEmailStatus = $("#mpp_email").attr('status');
+    var addressStatus = $("#address").attr('status');
+    var cityStatus = $("#city").attr('status');
+    var stateStatus =$("#state").attr('status');
+    var postCodeStatus = $("#post_code").attr('status');
     var emergencyContactNameStatus = $("#emergency_contact").attr('status');
     var emergencyNumberStatus = $("#emerg_con_tel_number1").attr('status');
     var contactConsentStatus = $("#choice2").attr('status');
