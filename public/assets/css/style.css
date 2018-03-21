@@ -401,15 +401,3 @@ CSS Grid layout for wider screens, when browser supports grid:
   background-color: orange;
   padding: 1em;
 }
-
-/*--------------------------------------------------------------
-Input Validation Survey Inputs:
---------------------------------------------------------------*/
-
-input:invalid {
-  border: 2px dashed red;
-}
-
-input:valid {
-  border: 2px solid black;
-}
