@@ -1,144 +1,187 @@
 <div id="surveyblock">
-<h1>DCVOAD</h1>
+  <h1>DCVOAD</h1>
 
-<h3>Please add your organization's information:</h3>
-
-<div class="row">
-  <div class="col-lg-12">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title"><strong>Public Information</strong></h3>
-      </div>
-      <div class="panel-body">
-        <form role="form">
-
-          <div class="form-group">
-            <label for="name">Please type in the Username you would like to use</label>
-            <input type="text" class="form-control" id="username">
-          </div>
-
-          <div class="form-group">
-            <label for="name">Please type in the Password you would like to use</label>
-            <input type="text" class="form-control" id="password">
-          </div>
-
-          <div class="form-group">
-            <label for="name">Organization Name</label>
-            <input type="text" class="form-control" id="orgName">
-          </div>
-
-          <div class="form-group">
-            <label for="role">Organization Website</label>
-            <input type="text" class="form-control" id="orgWebsite">
-          </div>
-
-          <div class="form-group">
-            <label for="age">Public Contact Phone Number</label>
-            <input type="text" class="form-control" id="orgNumber">
-          </div>
-
-          <div class="form-group">
-            <label for="age">Public Contact Phone Number extension</label>
-            <input type="text" class="form-control" id="extension1">
-          </div>
-
-          <div class="form-group">
-            <label for="force-points">Public Contact Email Address</label>
-            <input type="text" class="form-control" id="orgEmail">
-          </div>
-
-          <div class="form-group">
-            <label for="role">Blurb about Organization (1000 characters or less)</label>
-            <input type="text" class="form-control" id="blurb">
-          </div>
-
-          <div class="form-group">
-            <label for="role">I consent to have the above information listed on the DCVOAD website</label>
-            <select id="choice1">
-                      <option value="No">No</option>
-                      <option value="Yes">Yes</option>
-                    </select>
-          </div>
-
-        </form>
-        <br>
+  <div class="row">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Account Creation</strong></h3>
+          <form role="form">
+            <div class="form-group">
+              <label for="login">Please fillout the following questions and infromation. If you have already have an account please login in by clicking the bottom at the top of the screen.</label>
+              <label for="login">* = required</label>
+              <label for="username">Please type in the Username you would like to use *</label>
+              <input type="text" class="form-control" id="userName" status="incomplete" onchange="userAuthen()">
+            </div>
+            <div class="form-group">
+              <label for="password">Please type in the Password you would like to use *</label>
+              <input type="password" class="form-control" id="password" status="incomplete" onchange="passwordAuthen()">
+              <input type="checkbox" id="showPwd" onchange="showPassword()">
+              <label for="showPwd">show password</label>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
-
+    <div class="col-lg-3">
+    </div>
   </div>
-</div>
 
+  <h3>Please add your organizaton's information:</h3>
+  <div class="row">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Public Information</strong></h3>
+        </div>
+        <div class="panel-body">
+          <form role="form">
 
-<div class="row">
-  <div class="col-lg-12">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title"><strong>Restricted Information</strong></h3>
+            <div class="form-group">
+              <label for="name">Organization Name *</label>
+              <input type="text" class="form-control" id="orgName" status="incomplete" onchange="orgNameAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="role">Organization Website *</label>
+              <input type="text" class="form-control" id="orgWebsite" status="incomplete" onchange="orgWebsiteAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="age">Public Contact Phone Number *</label>
+              <input type="text" class="form-control" id="orgNumber" placeholder="Format: XXX-XXX-XXXX" status="incomplete" onchange="orgNumberAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="age">Public Contact Phone Number extension</label>
+              <input type="text" class="form-control" id="extension1" status="complete" onchange="exten1Authen">
+            </div>
+
+            <div class="form-group">
+              <label for="force-points">Public Contact Email Address</label>
+              <input type="text" class="form-control" id="orgEmail" status="incomplete" onchange="orgEmailAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="role">Blurb about Organization (1000 characters or less)</label>
+              <input type="text" class="form-control" id="blurb" status="complete" onchange="blurbAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="role">I consent to have the above information listed on the DCVOAD website *</label>
+              <select id="choice1" status="incomplete" onchange="getSiteConsent()">
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+            </div>
+          </form>
+        </div>
       </div>
-      <div class="panel-body">
-        <form role="form">
+    </div>
+    <div class="col-lg-3">
+    </div>
+  </div>
+  </div>
 
-          <div class="form-group">
-            <label for="name">Meeting Planning Point of Contact Name</label>
-            <input type="text" class="form-control" id="mpp_con_name">
+  <div class="row">
+    <div class="col-lg-3">
+    </div>
+    <div class="col-lg-6">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><strong>Restricted Information</strong></h3>
+        </div>
+        <div class="panel-body">
+          <form role="form">
+
+            <div class="form-group">
+              <label for="name">Meeting Planning Point of Contact Name *</label>
+              <input type="text" class="form-control" id="mpp_con_name" status="incomplete" onchange="mppConAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="force-points">Meeting Planning Email Address *</label>
+              <input type="text" class="form-control" id="mpp_email" status="incomplete" onchange="mppEmailAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="force-points">Organization Address *</label>
+              <input type="text" class="form-control" id="address" placeholder="Address" status="incomplete" onchange="addressAuthen()">
+              <input type="text" class="form-control" id="city" placeholder="City" status="incomplete" onchange="cityAuthen()">
+              <input type="text" class="form-control" id="state" placeholder="State" status="incomplete" onchange="stateAuthen()">
+              <input type="text" class="form-control" id="post_code" placeholder="Postal Code" status="incomplete" onchange="postCodeAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="name">Emergency Point of Contact Name *</label>
+              <input type="text" class="form-control" id="emergency_contact" status="incomplete" onchange="EmergenConNameAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="phoneNumber">Emergency Contact Phone Number 1 *</label>
+              <input type="text" class="form-control" id="emerg_con_tel_number1" placeholder="Format: XXX-XXX-XXXX" status="incomplete" onchange="emerg1NumberAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="extenstion">Extension</label>
+              <input type="text" class="form-control" id="emerg_extension1" status="complete" onchange="emergExt1Authen()">
+            </div>
+
+            <div class="form-group">
+              <label for="phoneNumber">Emergency Contact Phone Number 2</label>
+              <input type="text" class="form-control" id="emerg_con_tel_number2" placeholder="Format: XXX-XXX-XXXX" status="complete" onchange="emerg2NumberAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="extenstion">Extension</label>
+              <input type="text" class="form-control" id="emerg_extension2" status="complete" onchange="emergExt2Authen()">
+            </div>
+
+            <div class="form-group">
+              <label for="force-points">Emergency Contact Email Address</label>
+              <input type="text" class="form-control" id="emergency_contact_email" status="complete" onchange="emergConEmailAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="contactConsent">This point of contacts consents to be contacted during official disaster response exercises *</label><br>
+              <select id="choice2" status="incomplete" onchange="getcontactConsent()">
+                            <option value"No">No</option>
+                            <option value="Yes">Yes</option>
+                          </select>
+            </div>
+          </form>
+
+          <div class="text-right">
+            <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-fire"></span> Add information to DCVOAD's records</button>
           </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-3">
+    </div>
+  </div>
+  </div>
 
-          <div class="form-group">
-            <label for="force-points">Meeting Planning Email Address</label>
-            <input type="text" class="form-control" id="mpp_email">
-          </div>
+  <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
 
-          <div class="form-group">
-            <label for="force-points">Organization Address</label>
-            <input type="text" class="form-control" id="address" placeholder="Address">
-            <input type="text" class="form-control" id="city" placeholder="City">
-            <input type="text" class="form-control" id="state" placeholder="State">
-            <input type="text" class="form-control" id="post_code" placeholder="Postal Code">
-          </div>
-
-          <div class="form-group">
-            <label for="name">Emergency Point of Contact Name</label>
-            <input type="text" class="form-control" id="emergency_contact">
-          </div>
-
-          <div class="form-group">
-            <label for="age">Emergency Contact Phone Number 1</label>
-            <input type="text" class="form-control" id="emerg_con_tel_number1">
-            <input type="text" class="form-control" id="emerg_extension1">
-          </div>
-
-          <div class="form-group">
-            <label for="age">Emergency Contact Phone Number 2</label>
-            <input type="text" class="form-control" id="emerg_con_tel_number2">
-            <input type="text" class="form-control" id="emerg_extension2">
-          </div>
-
-          <div class="form-group">
-            <label for="force-points">Emergency Contact Email Address</label>
-            <input type="text" class="form-control" id="emergency_contact_email">
-          </div>
-
-          <div class="form-group">
-            <label for="contactConsent">This point of contacts consents to be contacted during official disaster response exercises</label><br>
-            <select id="choice2" class="form-contol selector">
-                                        <option value"No">No</option>
-                                        <option value="Yes">Yes</option>
-                                      </select>
-          </div>
-
-
-        </form>
-        <br>
-
-
-        <h1 id="draftErrorMessage"></h1>
-
-        <div class="text-right">
-          <button type="submit" class="btn btn-primary btn-md" id="add-btn"><span class="glyphicon glyphicon-fire"></span> Add information to DCVOAD's records</button>
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"></h4>
+        </div>
+        <div class="modal-body">
+          <p id="message"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>
       </div>
     </div>
   </div>
-</div>
-
 </div>
