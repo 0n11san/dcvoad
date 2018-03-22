@@ -79,7 +79,7 @@ router.get("/about", function(req, res) {
       user: data
     };
     console.log(hbsObject);
-    res.render("about", hbsObject);
+    res.render("user", hbsObject);
   });
 });
 
@@ -90,7 +90,7 @@ router.get("/user", function(req, res) {
       user: data
     };
     console.log(hbsObject);
-    res.render("about", hbsObject);
+    res.render("user", hbsObject);
   });
 });
 
@@ -100,7 +100,7 @@ router.get("/user", function(req, res) {
       user: data
     };
     console.log(hbsObject);
-    res.render("about", hbsObject);
+    res.render("user", hbsObject);
   });
 });
 

@@ -27,7 +27,8 @@
     "handlebars-helper-css": "^0.1.0",
     "mysql": "^2.15.0",
     "nodemon": "^1.17.2",
-    "npm": "^5.7.1"
+    "npm": "^5.7.1",
+    "requirejs": "^2.3.5"
   },
   "devDependencies": {}
 }
