@@ -15,7 +15,7 @@ node.appendChild(textnode);                              // Append the text to <
 document.getElementById("test").appendChild(node);     // Append <li> to <ul> with id="myList"
 
           });
-    alert(CSVinfo) ;
+    // alert(CSVinfo) ;
        });
 
 
@@ -60,3 +60,5 @@ document.getElementById("test").appendChild(node);     // Append <li> to <ul> wi
 //   fs.writeFileSync('./data.zip',buffer);
 //
 // });
+
+///////////////

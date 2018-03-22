@@ -15,7 +15,9 @@ router.get("/api/test", function(req, res) {
   var data = [
     {name: "Jon"},
     {name: "Patrick"},
-    {name: "Nathan"}
+    {name: "Nathan"},
+    {name: "Jen"},
+    {name: "Jamal"}
   ];
   res.json(data)
 });
@@ -77,7 +79,7 @@ router.get("/about", function(req, res) {
       user: data
     };
     console.log(hbsObject);
-    res.render("about", hbsObject);
+    res.render("user", hbsObject);
   });
 });
 
@@ -88,7 +90,7 @@ router.get("/user", function(req, res) {
       user: data
     };
     console.log(hbsObject);
-    res.render("about", hbsObject);
+    res.render("user", hbsObject);
   });
 });
 
@@ -98,7 +100,7 @@ router.get("/user", function(req, res) {
       user: data
     };
     console.log(hbsObject);
-    res.render("about", hbsObject);
+    res.render("user", hbsObject);
   });
 });
 
