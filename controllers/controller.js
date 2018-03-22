@@ -83,6 +83,27 @@ router.get("/about", function(req, res) {
   });
 });
 
+// User page
+router.get("/user", function(req, res) {
+  survey.all(function(data) {
+    var hbsObject = {
+      user: data
+    };
+    console.log(hbsObject);
+    res.render("about", hbsObject);
+  });
+});
+
+router.get("/user", function(req, res) {
+  user.all(function(data) {
+    var hbsObject = {
+      user: data
+    };
+    console.log(hbsObject);
+    res.render("about", hbsObject);
+  });
+});
+
 
 // Post for user
 router.post("/api/user", function(req, res) {
@@ -119,9 +140,27 @@ router.post("/api/survey", function(req, res) {
 
 
 
-// Put for user
-router.put("/api/user/:id", function(req, res) {
+// Put for userid
+router.put("/api/user/:user", function(req, res) {
   var condition = "id = " + req.params.id;
+
+  console.log("condition", condition);
+
+  user.update({
+    username: req.body.username
+  }, condition, function(result) {
+    if (result.changedRows == 0) {
+      // If no rows were changed, then the ID must not exist, so 404
+      return res.status(404).end();
+    } else {
+      res.status(200).end();
+    }
+  });
+});
+
+// Put for username
+router.put("/api/user/:username", function(req, res) {
+  var condition = "username = " + req.params.username;
 
   console.log("condition", condition);
 
@@ -163,7 +202,8 @@ router.put("/api/survey/:id", function(req, res) {
     emerg_con_tel_number2: req.body.emerg_con_tel_number2,
     emerg_extension2: req.body.emerg_extension2,
     emergency_contact_email: req.body.emergency_contact_email,
-    contactConsent: req.body.contactConsent
+    contactConsent: req.body.contactConsent,
+    userid: req.body.userid
   }, condition, function(result) {
     if (result.changedRows == 0) {
       // If no rows were changed, then the ID must not exist, so 404
