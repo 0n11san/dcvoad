@@ -1,4 +1,4 @@
-##seeds
+##Seeds
 
   INSERT INTO survey (orgName, orgWebsite, orgNumber, orgEmail, blurb, siteConsent, mpp_con_name, mpp_email, address, city, state, post_code, emergency_contact, emerg_con_tel_number1, emerg_con_tel_number2, emerg_extension2, emergency_contact_email, contactConsent)
   VALUES ('DC Baptist Convention', 'dcbaptist.org', 202-265-1526, 'info@dcbaptist.org', 'DCBC has been engaging in disaster response and recovery in some way shape or form for nearly a century. The DCBC Emergency Response Team was formed in 2012 and their inaugural mission was to New Jersey following Hurricane Sandy. The team provides debris removal, flood recovery and other disaster recovery services.', 'Yes', 'Jennifer Perry', 'jennifer.perry@dcbaptist.org', '1628 16th Street', 'Washington', 'DC', 20009, 'Jennifer Perry', 603-785-8477, 202-265-1526, 211, 'jennifer.perry@dcbaptist.org', 'yes');

@@ -1,6 +1,4 @@
 <div id="surveyblock">
-  <h1>DCVOAD</h1>
-
   <div class="row">
     <div class="col-lg-3">
     </div>
@@ -10,13 +8,17 @@
           <h3 class="panel-title"><strong>Account Creation</strong></h3>
           <form role="form">
             <div class="form-group">
-              <label for="login">Please fillout the following questions and infromation. If you have already have an account please login in by clicking the bottom at the top of the screen.</label>
+              <label for="login">Please fill out the survey below. If you have already have an account please log in (top left)</label>
+              <br />
               <label for="login">* = required</label>
-              <label for="username">Please type in the Username you would like to use *</label>
+              <br />
+              <label for="username">Please create a username *</label>
+              <br />
               <input type="text" class="form-control" id="userName" status="incomplete" onchange="userAuthen()">
             </div>
             <div class="form-group">
-              <label for="password">Please type in the Password you would like to use *</label>
+              <label for="password">Please create a password *</label>
+              <br />
               <input type="password" class="form-control" id="password" status="incomplete" onchange="passwordAuthen()">
               <input type="checkbox" id="showPwd" onchange="showPassword()">
               <label for="showPwd">show password</label>
@@ -43,36 +45,43 @@
 
             <div class="form-group">
               <label for="name">Organization Name *</label>
+              <br />
               <input type="text" class="form-control" id="orgName" status="incomplete" onchange="orgNameAuthen()">
             </div>
 
             <div class="form-group">
               <label for="role">Organization Website *</label>
+              <br />
               <input type="text" class="form-control" id="orgWebsite" status="incomplete" onchange="orgWebsiteAuthen()">
             </div>
 
             <div class="form-group">
               <label for="age">Public Contact Phone Number *</label>
+              <br />
               <input type="text" class="form-control" id="orgNumber" placeholder="Format: XXX-XXX-XXXX" status="incomplete" onchange="orgNumberAuthen()">
             </div>
 
             <div class="form-group">
-              <label for="age">Public Contact Phone Number extension</label>
+              <label for="age">Extension</label>
+              <br />
               <input type="text" class="form-control" id="extension1" status="complete" onchange="exten1Authen">
             </div>
 
             <div class="form-group">
               <label for="force-points">Public Contact Email Address *</label>
+              <br />
               <input type="text" class="form-control" id="orgEmail" status="incomplete" onchange="orgEmailAuthen()">
             </div>
 
             <div class="form-group">
               <label for="role">Blurb about Organization (1000 characters or less)</label>
+              <br />
               <input type="text" class="form-control" id="blurb" status="complete" onchange="blurbAuthen()">
             </div>
 
             <div class="form-group">
               <label for="role">I consent to have the above information listed on the DCVOAD website *</label>
+              <br />
               <select id="choice1" status="incomplete" onchange="getSiteConsent()">
                   <option value="No">No</option>
                   <option value="Yes">Yes</option>
@@ -85,7 +94,7 @@
     <div class="col-lg-3">
     </div>
   </div>
-  </div>
+
 
   <div class="row">
     <div class="col-lg-3">
@@ -100,61 +109,76 @@
 
             <div class="form-group">
               <label for="name">Meeting Planning Point of Contact Name *</label>
+              <br />
               <input type="text" class="form-control" id="mpp_con_name" status="incomplete" onchange="mppConAuthen()">
             </div>
 
             <div class="form-group">
               <label for="force-points">Meeting Planning Email Address *</label>
+              <br />
               <input type="text" class="form-control" id="mpp_email" status="incomplete" onchange="mppEmailAuthen()">
             </div>
 
             <div class="form-group">
               <label for="force-points">Organization Address *</label>
+              <br />
               <input type="text" class="form-control" id="address" placeholder="Address" status="incomplete" onchange="addressAuthen()">
-              <input type="text" class="form-control" id="city" placeholder="City" status="incomplete" onchange="cityAuthen()">
-              <input type="text" class="form-control" id="state" placeholder="State" status="incomplete" onchange="stateAuthen()">
-              <input type="text" class="form-control" id="post_code" placeholder="Postal Code" status="incomplete" onchange="postCodeAuthen()">
+              <br />
+              <div class="address-three">
+                <input type="text" class="form-control" id="city" placeholder="City" status="incomplete" onchange="cityAuthen()">
+                <input type="text" class="form-control" id="state" placeholder="State" status="incomplete" onchange="stateAuthen()">
+                <input type="text" class="form-control" id="post_code" placeholder="Postal Code" status="incomplete" onchange="postCodeAuthen()">
+              </div>
             </div>
 
             <div class="form-group">
               <label for="name">Emergency Point of Contact Name *</label>
+              <br />
               <input type="text" class="form-control" id="emergency_contact" status="incomplete" onchange="EmergenConNameAuthen()">
             </div>
 
             <div class="form-group">
               <label for="phoneNumber">Emergency Contact Phone Number 1 *</label>
+              <br />
               <input type="text" class="form-control" id="emerg_con_tel_number1" placeholder="Format: XXX-XXX-XXXX" status="incomplete" onchange="emerg1NumberAuthen()">
             </div>
 
             <div class="form-group">
               <label for="extenstion">Extension</label>
+              <br />
               <input type="text" class="form-control" id="emerg_extension1" status="complete" onchange="emergExt1Authen()">
             </div>
 
             <div class="form-group">
               <label for="phoneNumber">Emergency Contact Phone Number 2</label>
+              <br />
               <input type="text" class="form-control" id="emerg_con_tel_number2" placeholder="Format: XXX-XXX-XXXX" status="complete" onchange="emerg2NumberAuthen()">
             </div>
 
             <div class="form-group">
               <label for="extenstion">Extension</label>
+              <br />
               <input type="text" class="form-control" id="emerg_extension2" status="complete" onchange="emergExt2Authen()">
             </div>
 
             <div class="form-group">
               <label for="force-points">Emergency Contact Email Address *</label>
+              <br />
               <input type="text" class="form-control" id="emergency_contact_email" status="incomplete" onchange="emergConEmailAuthen()">
             </div>
 
             <div class="form-group">
               <label for="contactConsent">This point of contacts consents to be contacted during official disaster response exercises *</label><br>
+
               <select id="choice2" status="incomplete" onchange="getcontactConsent()">
                             <option value"No">No</option>
                             <option value="Yes">Yes</option>
                           </select>
+
             </div>
           </form>
-
+</div>
+<br />
           <div class="text-right">
             <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-fire"></span> Add information to DCVOAD's records</button>
           </div>
@@ -172,15 +196,15 @@
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
           <h4 class="modal-title"></h4>
         </div>
         <div class="modal-body">
           <p id="message"></p>
         </div>
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>

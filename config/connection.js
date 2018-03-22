@@ -1,17 +1,20 @@
+// brings in mysql
 var mysql = require("mysql");
-// require("dotenv").load();
+
+// creates connection var for jawsdb or mysql
 var connection;
 
+// connects to db
 if (process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-connection = mysql.createConnection({
-  port: 3306,
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "voad_db"
-});
+  connection = mysql.createConnection({
+    port: 3306,
+    host: "localhost",
+    user: "root",
+    password: "",
+    database: "voad_db"
+  });
 };
 
 // Make connection.

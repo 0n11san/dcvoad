@@ -1,6 +1,4 @@
 <div id="surveyblock">
-  <h1>DCVOAD</h1>
-
 
   <h3 class="panel-title"><strong>If your information has changed, please update it below.</strong></h3>
   <div class="row">
@@ -46,6 +44,18 @@
             </div>
 
             <div class="form-group">
+              <label for="role">I consent to have the above information listed on the DCVOAD website *</label>
+              <select id="choice1" status="incomplete" onchange="getSiteConsent()">
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="panel-heading">
+              <h3 class="panel-title"><strong>Restricted Information</strong></h3>
+            </div>
+
+            <div class="form-group">
               <label for="name">Meeting Planning Point of Contact Name *</label>
               <input type="text" class="form-control" id="mpp_con_name" status="complete" onchange="mppConAuthen()">
             </div>
@@ -58,9 +68,11 @@
             <div class="form-group">
               <label for="force-points">Organization Address *</label>
               <input type="text" class="form-control" id="address" placeholder="Address" status="incomplete" onchange="addressAuthen()">
-              <input type="text" class="form-control" id="city" placeholder="City" status="incomplete" onchange="cityAuthen()">
-              <input type="text" class="form-control" id="state" placeholder="State" status="incomplete" onchange="stateAuthen()">
-              <input type="text" class="form-control" id="post_code" placeholder="Postal Code" status="incomplete" onchange="postCodeAuthen()">
+              <div class="address-three">
+                <input type="text" class="form-control" id="city" placeholder="City" status="incomplete" onchange="cityAuthen()">
+                <input type="text" class="form-control" id="state" placeholder="State" status="incomplete" onchange="stateAuthen()">
+                <input type="text" class="form-control" id="post_code" placeholder="Postal Code" status="incomplete" onchange="postCodeAuthen()">
+              </div>
             </div>
 
             <div class="form-group">
@@ -93,16 +105,10 @@
               <input type="text" class="form-control" id="emergency_contact_email" status="complete" onchange="emergConEmailAuthen()">
             </div>
 
-            <div class="form-group">
-              <label for="role">I consent to have the above information listed on the DCVOAD website *</label>
-              <select id="choice1" status="incomplete" onchange="getSiteConsent()">
-                  <option value="No">No</option>
-                  <option value="Yes">Yes</option>
-                </select>
-            </div>
+
 
             <div class="form-group">
-              <label for="contactConsent">This point of contacts consents to be contacted during official disaster response exercises *</label><br>
+              <label for="contactConsent">This point of contact consents to be contacted during official disaster response exercises *</label>
               <select id="choice2" status="incomplete" onchange="getcontactConsent()">
                             <option value"No">No</option>
                             <option value="Yes">Yes</option>
