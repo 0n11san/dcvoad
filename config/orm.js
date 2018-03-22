@@ -1,7 +1,7 @@
 // Import MySQL connection.
 var connection = require("../config/connection.js");
 
-
+// for each item of the array, create a question mark
 function printQuestionMarks(num) {
   var arr = [];
 
@@ -20,12 +20,12 @@ for (var key in ob) {
   var value = ob[key];
   // check to skip hidden properties
   if (Object.hasOwnProperty.call(ob, key)) {
-    // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
+    // if string with spaces, add quotations (Red Cross => 'Red Cross')
     if (typeof value === "string" && value.indexOf(" ") >= 0) {
       value = "'" + value + "'";
     }
-    // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-    // e.g. {sleepy: true} => ["sleepy=true"]
+    // e.g. {orgName: 'Red Cross'} => ["orgName='Red Cross'"]
+    // e.g. {siteConsent: 'yes'} => ["siteConsent='yes'"]
     arr.push(key + "=" + value);
   }
 }
@@ -46,6 +46,8 @@ var orm = {
       cb(result);
     });
   },
+
+  // create function
   create: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
@@ -67,37 +69,40 @@ var orm = {
     });
   },
 
-update: function(table, objColVals, condition, cb) {
-  var queryString = "UPDATE " + table;
+  // update function
+  update: function(table, objColVals, condition, cb) {
+    var queryString = "UPDATE " + table;
 
-  queryString += " SET ";
-  queryString += objToSql(objColVals);
-  queryString += " WHERE ";
-  queryString += condition;
+    queryString += " SET ";
+    queryString += objToSql(objColVals);
+    queryString += " WHERE ";
+    queryString += condition;
 
-  console.log(queryString);
-  connection.query(queryString, function(err, result) {
-    if (err) {
-      throw err;
-    }
+    console.log(queryString);
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
 
-    cb(result);
-  });
-},
-delete: function(table, condition, cb) {
-  var queryString = "DELETE FROM " + table;
-  queryString += " WHERE ";
-  queryString += condition;
+      cb(result);
+    });
+  },
 
-  connection.query(queryString, function(err, result) {
-    if (err) {
-      throw err;
-    }
+  // delete function
+  delete: function(table, condition, cb) {
+    var queryString = "DELETE FROM " + table;
+    queryString += " WHERE ";
+    queryString += condition;
 
-    cb(result);
-  });
-}
+    connection.query(queryString, function(err, result) {
+      if (err) {
+        throw err;
+      }
+
+      cb(result);
+    });
+  }
 };
 
-// Export the orm object for the model (burger.js).
+// Export the orm object for the models (survey.js and users.js).
 module.exports = orm;

@@ -3,7 +3,7 @@ CSS Reset
 --------------------------------------------------------------*/
 
 html {
-  font-family: sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -106,13 +106,7 @@ body {
 }
 
 
-.voad-navbar img{
-  opacity: 0.5;
-    filter: alpha(opacity=50); /* For IE8 and earlier */
-}
-.voad-navbar img:hover{
-  opacity: 1;
-    filter: alpha(opacity=100); /* For IE8 and earlier */
+
 }
 
 /* Add a color to the active/current link */
@@ -130,9 +124,7 @@ body {
  ----------------------------------------------------------------
  --------------------------------------------------------------*/
 
-/* NOTE:
- * Grid/Flex layout stuff starts here
- */
+/* note that: Grid/Flex layout stuff starts here */
 
 
 
@@ -176,12 +168,13 @@ Typography
 
 body, button, input, select, textarea {
   color: #404040;
-  font-family: 'Helvetica', Arial, sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: 18px;
   line-height: 1.5;
 }
 
 h1, h2, h3 {
+  font-family: 'IBM Plex Serif', serif;
   text-align: center;
   margin: 0;
   padding: 1em 0;
@@ -391,13 +384,38 @@ CSS Grid layout for wider screens, when browser supports grid:
 
 /* replaces bootstrap CSS for overall survey.handlebars (resolves previous conflicts) */
 #surveyblock {
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  grid-template-columns: 1fr;
-  padding: 2em;
+  /* display: grid; */
+  /* align-items: center;
+  justify-content: center; */
+  /* grid-template-columns: 1fr; */
+  padding: 4em;
 }
+
+
 .form-control {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 100%;
+  border: 0px;
+  outline: none;
+  box-shadow: insert 0 0 10px #eee;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  font-family: 'Roboto Condensed', sans-serif, Arial;
+  font-size: 20px;
   background-color: orange;
-  padding: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-indent: 1em;
+  -webkit-transition: background-color 500ms ease-out 800ms;
+  -moz-transition: background-color 500ms ease-out 800ms;
+  -o-transition: background-color 500ms ease-out 800ms;
+  transition: background-color 500ms ease-out 800ms;
+}
+
+.address-three {
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: 1fr 1fr 1fr;
 }
