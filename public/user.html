@@ -20,97 +20,34 @@
 
 
   <h1>DCVOAD</h1>
-    <header class="masthead">
-    <div class="JESlogo">
-      <!-- <nav> -->
-        <div class="voad-navbar">
-          <a href="/"><img alt="home emblem" id="VOAD-logo" src="assets/media/NVOAD.png"></a>
-          <a href="/about">About</a>
-          <a href="/members">Member Orgs</a>
-          <div id="blank-space"></div>
-          <div>
-            <!-- <section class="nav-container"> -->
-
-              <!-- <aside class="menu"> -->
-                <div class="menu-content">
-                  <i class="fa fa-unlock-alt"></i><a href="#" id="login">Login</a> | <i class="fa fa-user"></i><a href="/register">Register</a>
-                </div>
-                <div class="arrow-up"></div>
-              </aside>
-              <!-- Dropdown for the login -->
-              <div class="login-form">
-                <form>
-                  <label>Username</label>
-                  <div>
-                    <input type="text" placeholder="Username" required/>
-                  </div>
-                  <label>Password</label>
-                  <div>
-                    <input type="password" placeholder="Password" required/>
-                  </div>
-                  <div>
-                    <input type="submit" value="Log In" />
-                  </div>
-                  <div>
-                    <a href="#" style="text-decoration:none;position:relative;top:20px;font-size:16px;color:gray;">Lost Your Password?</a>
-                  </div>
-                </form>
-                  </div>
-            </section>
-            </div>
-        </div>
-
-      <!-- </nav> -->
-
-      </div>
-  </header>
 
 
+<h3 class="panel-title"><strong>If your information has changed, please update it below.</strong></h3>
   <div class="row">
     <div class="col-lg-3">
     </div>
     <div class="col-lg-6">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title"><strong>Account Information</strong></h3>
           <form role="form">
             <div class="form-group">
-              <label for="login">Please fillout the following questions and infromation. If you have already have an account please login in by clicking the bottom at the top of the screen.</label>
               <label for="username">Username</label>
-              <input type="text" class="form-control" id="userName" status="incomplete" onchange="userAuthen()">
-              <button type="button" name="button"></button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-3">
-    </div>
-  </div>
-
-  <h3>Please add your organizaton's information:</h3>
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title"><strong>Public Information</strong></h3>
-        </div>
-        <div class="panel-body">
-          <form role="form">
-
-            <div class="form-group">
-              <label for="name">Organization Name *</label>
-              <input type="text" class="form-control" id="orgName" status="incomplete" onchange="orgNameAuthen()">
+              <input type="text" class="form-control" id="userName" status="complete" onchange="userAuthen()">
             </div>
 
             <div class="form-group">
-              <label for="role">Organization Website *</label>
-              <input type="text" class="form-control" id="orgWebsite" status="incomplete" onchange="orgWebsiteAuthen()">
+              <label for="name">Organization Name</label>
+              <input type="text" class="form-control" id="orgName" status="complete" onchange="orgNameAuthen()">
             </div>
 
             <div class="form-group">
-              <label for="age">Public Contact Phone Number *</label>
-              <input type="text" class="form-control" id="orgNumber" placeholder="Format: XXX-XXX-XXXX" status="incomplete" onchange="orgNumberAuthen()">
+              <label for="role">Organization Website</label>
+              <input type="text" class="form-control" id="orgWebsite" status="complete" onchange="orgWebsiteAuthen()">
+            </div>
+
+            <div class="form-group">
+              <label for="age">Public Contact Phone Number</label>
+              <input type="text" class="form-control" id="orgNumber" placeholder="Format: XXX-XXX-XXXX" status="complete" onchange="orgNumberAuthen()">
             </div>
 
             <div class="form-group">
@@ -120,7 +57,7 @@
 
             <div class="form-group">
               <label for="force-points">Public Contact Email Address</label>
-              <input type="text" class="form-control" id="orgEmail" status="incomplete" onchange="orgEmailAuthen()">
+              <input type="text" class="form-control" id="orgEmail" status="complete" onchange="orgEmailAuthen()">
             </div>
 
             <div class="form-group">
@@ -129,36 +66,13 @@
             </div>
 
             <div class="form-group">
-              <label for="role">I consent to have the above information listed on the DCVOAD website *</label>
-              <select id="choice1" status="incomplete" onchange="getSiteConsent()">
-                  <option value="No">No</option>
-                  <option value="Yes">Yes</option>
-                </select>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  </div>
-
-  <div class="row">
-    <div class="col-lg-12">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <h3 class="panel-title"><strong>Restricted Information</strong></h3>
-        </div>
-        <div class="panel-body">
-          <form role="form">
-
-            <div class="form-group">
               <label for="name">Meeting Planning Point of Contact Name *</label>
-              <input type="text" class="form-control" id="mpp_con_name" status="incomplete" onchange="mppConAuthen()">
+              <input type="text" class="form-control" id="mpp_con_name" status="complete" onchange="mppConAuthen()">
             </div>
 
             <div class="form-group">
               <label for="force-points">Meeting Planning Email Address *</label>
-              <input type="text" class="form-control" id="mpp_email" status="incomplete" onchange="mppEmailAuthen()">
+              <input type="text" class="form-control" id="mpp_email" status="complete" onchange="mppEmailAuthen()">
             </div>
 
             <div class="form-group">
@@ -200,22 +114,28 @@
             </div>
 
             <div class="form-group">
+              <label for="role">I consent to have the above information listed on the DCVOAD website *</label>
+              <select id="choice1" status="incomplete" onchange="getSiteConsent()">
+                  <option value="No">No</option>
+                  <option value="Yes">Yes</option>
+                </select>
+            </div>
+
+            <div class="form-group">
               <label for="contactConsent">This point of contacts consents to be contacted during official disaster response exercises *</label><br>
               <select id="choice2" status="incomplete" onchange="getcontactConsent()">
                             <option value"No">No</option>
                             <option value="Yes">Yes</option>
                           </select>
             </div>
-          </form>
 
-          <div class="text-right">
-            <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-fire"></span>Save Changes</button>
-          </div>
+          </form>
         </div>
       </div>
+      <div class="text-right">
+        <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-fire"></span>Save Changes</button>
+      </div>
     </div>
-  </div>
-  </div>
 
   <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
