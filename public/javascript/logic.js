@@ -14,7 +14,7 @@ function userAuthen() {
     userinput.css('background-color', '#4ae896');
   } else {
     $("#message").html("Usernames must be atleast 6 characters long and cannot be longer than 10 characters. Please try again");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     userinput.attr('status', 'incomplete');
     userinput.css('background-color', '#ed6250');
   }
@@ -38,7 +38,7 @@ function passwordAuthen() {
     passwordType.css('background-color', '#4ae896');
   } else {
     $("#message").html("Passwords must be atleast 8 characters long and cannot be longer than 16 characters. Please try again");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     passwordType.attr('status', 'incomplete');
     passwordType.css('background-color', '#ed6250');
   }
@@ -52,7 +52,7 @@ function orgNameAuthen() {
     orgInput.css('background-color', '#4ae896');
   } else {
     $("#message").html("Please fill out the Organization Name section in order to move forward.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     orgInput.attr('status', 'incomplete');
     orgInput.css('background-color', '#ed6250');
   }
@@ -66,7 +66,7 @@ function orgWebsiteAuthen() {
     orgWebsite.css('background-color', '#4ae896');
   } else {
     $("#message").html("Please provide a valid website.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     orgWebsite.attr('status', 'incomplete');
     orgWebsite.css('background-color', '#ed6250');
   }
@@ -80,9 +80,9 @@ function orgEmailAuthen() {
     orgEmail.attr('status', 'complete');
     orgEmail.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Phone Number did not match the format of XXX.XXX.XXXX. Please correct.");
-    $('#gridSystemModal').modal("show");
-    orgEmail.attr('status', 'Incomplete');
+    $("#message").html("Please provide a valid email.");
+    $('#myModal').modal("show");
+    orgEmail.attr('status', 'incomplete');
     orgEmail.css('background-color', '#ed6250');
   }
 };
@@ -96,8 +96,8 @@ function orgNumberAuthen() {
     orgNumber.css('background-color', '#4ae896');
   } else {
     $("#message").html("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
-    $('#gridSystemModal').modal("show");
-    orgNumber.attr('status', 'Incomplete');
+    $('#myModal').modal("show");
+    orgNumber.attr('status', 'incomplete');
     orgNumber.css('background-color', '#ed6250');
   }
 };
@@ -106,10 +106,12 @@ function exten1Authen() {
   var extInput = $("#extension1");
   var extInputlength = $("#extension1").val().length;
   if (extInputlength > 0 && extInputlength <= 20) {
+    extInput.attr('status', 'complete');
     extInput.css('background-color', '#4ae896');
   } else {
     $("#message").html("The extension you have entered it too long. Max 20 characters.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
+    extInput.attr('status', 'incomplete');
     extInput.css('background-color', '#ed6250');
   }
 };
@@ -122,8 +124,8 @@ function blurbAuthen() {
     blurbInput.css('background-color', '#4ae896');
   } else {
     $("#message").html("Your Blurb has too many character. Max length in 1000. Please edit and try again.");
-    $('#gridSystemModal').modal("show");
-    blurbInput.attr('status', 'error');
+    $('#myModal').modal("show");
+    blurbInput.attr('status', 'incomplete');
     blurbInput.css('background-color', '#ed6250');
   }
 };
@@ -142,7 +144,7 @@ function getSiteConsent() {
     answer1Id.attr('status', 'incomplete');
     answer1Id.css('background-color', '#ed6250');
     $("#message").html("Please consent to allow us access to the information you've provided.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
   }
 }
 
@@ -154,7 +156,7 @@ function mppConAuthen() {
     mppConInput.css('background-color', '#4ae896');
   } else {
     $("#message").html("Please fill out the Meeting Planning Point of Contact Name section in order to move forward.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     mppConInput.attr('status', 'incomplete');
     mppConInput.css('background-color', '#ed6250');
   }
@@ -168,7 +170,7 @@ function EmergenConNameAuthen() {
     emergConInput.css('background-color', '#4ae896');
   } else {
     $("#message").html("Please fill out the Emergency Contact Name section in order to move forward.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     emergConInput.attr('status', 'incomplete');
     emergConInput.css('background-color', '#ed6250');
   }
@@ -183,8 +185,8 @@ function mppEmailAuthen() {
     mppEmail.css('background-color', '#4ae896');
   } else {
     $("#message").html("Please provide a valid email.");
-    $('#gridSystemModal').modal("show");
-    mppEmail.attr('status', 'Incomplete');
+    $('#myModal').modal("show");
+    mppEmail.attr('status', 'incomplete');
     mppEmail.css('background-color', '#ed6250');
   }
 };
@@ -197,7 +199,7 @@ function addressAuthen() {
     addressInput.css('background-color', '#4ae896');
   } else {
     $("#message").html("I am sorry the address you have provided is too long. Max is 255 characters.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     addressInput.attr('status', 'incomplete');
     addressInput.css('background-color', '#ed6250');
   }
@@ -211,7 +213,7 @@ function cityAuthen() {
     cityInput.css('background-color', '#4ae896');
   } else {
     $("#message").html("I am sorry the city you have provided is too long.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     cityInput.attr('status', 'incomplete');
     cityInput.css('background-color', '#ed6250');
   }
@@ -225,7 +227,7 @@ function stateAuthen() {
     stateInput.css('background-color', '#4ae896');
   } else {
     $("#message").html("I am sorry the state you have provided is too long.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     stateInput.attr('status', 'incomplete');
     stateInput.css('background-color', '#ed6250');
   }
@@ -240,7 +242,7 @@ function postCodeAuthen() {
     postCodeInput.css('background-color', '#4ae896');
   } else {
     $("#message").html("The Postal Code you have provided is not correct. Max 5 numbers. Please correct.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     postCodeInput.attr('status', 'incomplete');
     postCodeInput.css('background-color', '#ed6250');
   }
@@ -255,7 +257,7 @@ function emerg1NumberAuthen() {
     emerg1Number.css('background-color', '#4ae896');
   } else {
     $("#message").html("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     emerg1Number.attr('status', 'incomplete');
     emerg1Number.css('background-color', '#ed6250');
   }
@@ -270,7 +272,7 @@ function emerg2NumberAuthen() {
     emerg2Number.css('background-color', '#4ae896');
   } else {
     $("#message").html("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
     emerg2Number.attr('status', 'incomplete');
     emerg2Number.css('background-color', '#ed6250');
   }
@@ -284,8 +286,8 @@ function emergExt1Authen() {
     emergExtInput.css('background-color', '#4ae896');
   } else {
     $("#message").html("The extension you have entered it too long. Max 20 characters.");
-    $('#gridSystemModal').modal("show");
-    emergExtInput.attr('status', 'complete');
+    $('#myModal').modal("show");
+    emergExtInput.attr('status', 'incomplete');
     emergExtInput.css('background-color', '#ed6250');
   }
 };
@@ -298,8 +300,8 @@ function emergExt2Authen() {
     emergExtInput.css('background-color', '#4ae896');
   } else {
     $("#message").html("The extension you have entered it too long. Max 20 characters.");
-    $('#gridSystemModal').modal("show");
-    emergExtInput.attr('status', 'complete');
+    $('#myModal').modal("show");
+    emergExtInput.attr('status', 'incomplete');
     emergExtInput.css('background-color', '#ed6250');
   }
 };
@@ -314,8 +316,8 @@ function emergConEmailAuthen() {
     emergConEmail.css('background-color', '#4ae896');
   } else {
     $("#message").html("Please provide a valid email address.");
-    $('#gridSystemModal').modal("show");
-    emergConEmail.attr('status', 'Incomplete');
+    $('#myModal').modal("show");
+    emergConEmail.attr('status', 'incomplete');
     emergConEmail.css('background-color', '#ed6250');
   }
 };
@@ -334,10 +336,126 @@ function getcontactConsent() {
     answer2Id.attr('status', 'incomplete');
     answer2Id.css('background-color', '#ed6250');
     $("#message").html("Please consent to allows us to contact you during disaster response exercises in our to move forward.");
-    $('#gridSystemModal').modal("show");
+    $('#myModal').modal("show");
   }
 }
 
+function submittingNewInfo() {
+  getSiteConsent();
+  getcontactConsent();
+
+
+  // Status variables
+  var usernameStatus = $("#userName").attr('status');
+  var passwordStatus = $("#password").attr('status');
+  var orgInputStatus = $("#orgName").attr('status');
+  var orgWebsiteStatus = $("#orgWebsite").attr('status');
+  var publicContactNumStatus = $("#orgNumber").attr('status');
+  var extension1Status = $("#extension1").attr('status');
+  var emailStatus = $("#orgEmail").attr('status');
+  var blurbStatus = $("#blurb").attr('status');
+  var siteConsentStatus = $("#choice1").attr('status');
+  var mppContactNameStatus = $("#mpp_con_name").attr('status');
+  var mppEmailStatus = $("#mpp_email").attr('status');
+  var addressStatus = $("#address").attr('status');
+  var cityStatus = $("#city").attr('status');
+  var stateStatus = $("#state").attr('status');
+  var postCodeStatus = $("#post_code").attr('status');
+  var emergencyContactNameStatus = $("#emergency_contact").attr('status');
+  var emergencyNumberStatus = $("#emerg_con_tel_number1").attr('status');
+  var emergencyNumberExtensionStatus = $("#emerg_extension1").attr('status');
+  var emergencyNumber2Status = $("#emerg_con_tel_number2").attr('status');
+  var emergencyNumber2ExtensionStatus = $("#emerg_extension2").attr('status');
+  var emergConEmailStatus = $("#emergency_contact_email").attr('status');
+  var contactConsentStatus = $("#choice2").attr('status');
+
+  // Console Logs
+  console.log(usernameStatus);
+  console.log(passwordStatus);
+  console.log(orgInputStatus);
+  console.log(orgWebsiteStatus);
+  console.log(publicContactNumStatus);
+  console.log(extension1Status);
+  console.log(emailStatus);
+  console.log(blurbStatus);
+  console.log(siteConsentStatus);
+  console.log(mppContactNameStatus);
+  console.log(mppEmailStatus);
+  console.log(addressStatus);
+  console.log(cityStatus);
+  console.log(stateStatus);
+  console.log(postCodeStatus);
+  console.log(emergencyContactNameStatus);
+  console.log(emergencyNumberStatus);
+  console.log(emergencyNumberExtensionStatus);
+  console.log(emergencyNumber2Status);
+  console.log(emergencyNumber2ExtensionStatus);
+  console.log(emergConEmailStatus);
+  console.log(contactConsentStatus);
+
+  // if all the status are complete and blurb is errorFree then submit will be enabled and submit to the database.
+  if (usernameStatus && passwordStatus && orgInputStatus && orgWebsiteStatus && publicContactNumStatus && extension1Status &&
+    emailStatus && blurbStatus && siteConsentStatus && mppContactNameStatus && mppEmailStatus && addressStatus && cityStatus &&
+    stateStatus && postCodeStatus && emergencyContactNameStatus && emergencyNumberStatus && emergencyNumberExtensionStatus &&
+    emergencyNumber2Status && emergencyNumber2ExtensionStatus && emergConEmailStatus && contactConsentStatus
+     === 'complete') {
+
+    var newUser = {
+      username: $("#userName").val(),
+      password: $("#password").val(),
+      status: userStatus
+    };
+
+    var newSurvey = {
+      orgName: $("#orgName").val(),
+      orgWebsite: $("#orgWebsite").val(),
+      orgNumber: $("#orgNumber").val(),
+      extension1: $("#extension1").val(),
+      orgEmail: $("#orgEmail").val(),
+      blurb: $("#blurb").val(),
+      siteConsent: siteConsent,
+      mpp_con_name: $("#mpp_con_name").val(),
+      mpp_email: $("#mpp_email").val(),
+      address: $("#address").val(),
+      city: $("#city").val(),
+      state: $("#state").val(),
+      post_code: $("#post_code").val(),
+      emergency_contact: $("#emergency_contact").val(),
+      emerg_con_tel_number1: $("#emerg_con_tel_number1").val(),
+      emerg_extension1: $("#emerg_extension1").val(),
+      emerg_con_tel_number2: $("#emerg_con_tel_number2").val(),
+      emerg_extension2: $("#emerg_extension2").val(),
+      emergency_contact_email: $("#emergency_contact_email").val(),
+      contactConsent: contactConsent
+    };
+
+    $.post("/api/user", newUser)
+      .done(function(data) {
+        newSurvey.userid = data.id;
+        creatingSurvey(newSurvey);
+        console.log("*********");
+        console.log(data);
+        console.log("created new user");
+        $("#message").html("New User has been added.");
+        $('#myModal').modal("show");
+      });
+
+  } else {
+    $("#message").html("It appears that all the required fields have not been filled out correctly. Please review the information you provided and resubmit.");
+    $('#myModal').modal("show");
+  }
+};
+
+function creatingSurvey(newSurvey) {
+
+  $.post("/api/survey", newSurvey)
+    .done(function(data) {
+      console.log("*********");
+      console.log(data);
+      $("#message").html("New Survey has been added.");
+      $('#myModal').modal("show");
+    });
+};
 
 $(document).ready(function() {
 
@@ -345,114 +463,6 @@ $(document).ready(function() {
 
       $("#add-btn").on("click", function(event) {
           event.preventDefault();
-
-          function submittingNewInfo() {
-            getSiteConsent();
-            getcontactConsent();
-
-
-            // Status variables
-            var usernameStatus = $("#userName").attr('status');
-            var passwordStatus = $("#password").attr('status');
-            var orgInputStatus = $("#orgName").attr('status');
-            var orgWebsiteStatus = $("#orgWebsite").attr('status');
-            var publicContactNumStatus = $("#orgNumber").attr('status');
-            var extension1Status = $("#extension1").attr('status');
-            var emailStatus = $("#orgEmail").attr('status');
-            var blurbStatus = $("#blurb").attr('status');
-            var siteConsentStatus = $("#choice1").attr('status');
-            var mppContactNameStatus = $("#mpp_con_name").attr('status');
-            var mppEmailStatus = $("#mpp_email").attr('status');
-            var addressStatus = $("#address").attr('status');
-            var cityStatus = $("#city").attr('status');
-            var stateStatus = $("#state").attr('status');
-            var postCodeStatus = $("#post_code").attr('status');
-            var emergencyContactNameStatus = $("#emergency_contact").attr('status');
-            var emergencyNumberStatus = $("#emerg_con_tel_number1").attr('status');
-            var emergencyNumberExtensionStatus = $("#emerg_extension1").attr('status');
-            var emergencyNumber2Status = $("#emerg_con_tel_number2").attr('status');
-            var emergencyNumber2ExtensionStatus = $("#emerg_extension2").attr('status');
-            var emergConEmailStatus = $("#emergency_contact_email").attr('status');
-            var contactConsentStatus = $("#choice2").attr('status');
-
-            // Console Logs
-            console.log(usernameStatus);
-            console.log(passwordStatus);
-            console.log(orgInputStatus);
-            console.log(orgWebsiteStatus);
-            console.log(publicContactNumStatus);
-            console.log(extension1Status);
-            console.log(emailStatus);
-            console.log(blurbStatus);
-            console.log(siteConsentStatus);
-            console.log(mppContactNameStatus);
-            console.log(mppEmailStatus);
-            console.log(addressStatus);
-            console.log(cityStatus);
-            console.log(stateStatus);
-            console.log(postCodeStatus);
-            console.log(emergencyContactNameStatus);
-            console.log(emergencyNumberStatus);
-            console.log(emergencyNumberExtensionStatus);
-            console.log(emergencyNumber2Status);
-            console.log(emergencyNumber2ExtensionStatus);
-            console.log(contactConsentStatus);
-
-            // if all the status are complete and blurb is errorFree then submit will be enabled and submit to the database.
-            if (usernameStatus && passwordStatus && orgInputStatus && orgWebsiteStatus && publicContactNumStatus && extension1Status &&
-              emailStatus && blurbStatus && siteConsentStatus && mppContactNameStatus && mppEmailStatus && addressStatus && cityStatus &&
-              stateStatus && postCodeStatus && emergencyContactNameStatus && emergencyNumberStatus && emergencyNumberExtensionStatus &&
-              emergencyNumber2Status && emergencyNumber2ExtensionStatus && emergConEmailStatus && contactConsentStatus === 'complete') {
-              var newUser = {
-                username: $("#username").val(),
-                password: $("#password").val(),
-                status: userStatus
-              };
-
-              var newSurvey = {
-                orgName: $("#orgName").val(),
-                orgWebsite: $("#orgWebsite").val(),
-                orgNumber: $("#orgNumber").val(),
-                extension1: $("#extension1").val(),
-                orgEmail: $("#orgEmail").val(),
-                blurb: $("#blurb").val(),
-                siteConsent: siteConsent,
-                mpp_con_name: $("#mpp_con_name").val(),
-                mpp_email: $("#mpp_email").val(),
-                address: $("#address").val(),
-                city: $("#city").val(),
-                state: $("#state").val(),
-                post_code: $("#post_code").val(),
-                emergency_contact: $("#emergency_contact").val(),
-                emerg_con_tel_number1: $("#emerg_con_tel_number1").val(),
-                emerg_extension1: $("#emerg_extension1").val(),
-                emerg_con_tel_number2: $("#emerg_con_tel_number2").val(),
-                emerg_extension2: $("#emerg_extension2").val(),
-                emergency_contact_email: $("#emergency_contact_email").val(),
-                contactConsent: contactConsent
-              };
-
-              $.post("/api/user", newUser)
-                .done(function(data) {
-                  console.log("*********");
-                  console.log(data);
-                  $("#message").html("New User has been added.");
-                  $('#gridSystemModal').modal("show");
-                });
-
-              function createSurvey(userid) {
-                newSurvey.userid = userid;
-                $.post("/api/survey", newSurvey)
-                  .done(function(data) {
-                    console.log(data);
-                    $("#message").html("New Survey has been added.");
-                    $('#gridSystemModal').modal("show");
-                  });
-              };
-            } else {
-              $("#message").html("It appears that all the required fields have not been filled out correctly. Please review the information you provided and resubmit.");
-              $('#gridSystemModal').modal("show");
-            }
-          };
+          submittingNewInfo();
           });
       });
