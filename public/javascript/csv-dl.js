@@ -1,5 +1,3 @@
-// var csv_export=require('csv-export');
-
 //require the database
 var CSVinfo = []; //Array that will contain all info from database (minus sensitive info)
 $(document).ready(function() {
