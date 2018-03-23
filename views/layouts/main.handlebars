@@ -41,62 +41,9 @@
           <a href="/about">About</a>
           <a href="/members">Member Orgs</a>
           <div id="blank-space"></div>
-          <div>
-            <div class="menu-content">
-              <i class="fa fa-unlock-alt"></i><a href="/user" id="login">Login</a> | <i class="fa fa-user"></i><a href="/register">Register</a>
-            </div>
-
-            <div class="arrow-up"></div>
-
-            <!-- Dropdown for the login -->
-            <div class="login-form">
-              <form>
-
-                <!-- username -->
-                <label>Username</label>
-                <div>
-                  <input type="text" class="jamaldropdown" placeholder="Username" required/>
-                </div>
-
-                <!-- password -->
-                <label>Password</label>
-                <div>
-                  <input type="password" id="jamaldropdown" placeholder="Password" required/>
-                </div>
-
-                <!-- submit -->
-                <div>
-                  <input type="submit" value="Log In" />
-                </div>
-
-                <!-- lost password system tbd -->
-                <div>
-                  <a href="#" style="text-decoration:none;position:relative;top:20px;font-size:16px;color:gray;">Lost Your Password?</a>
-                </div>
-
-              </form>
-            </div>
-          </div>
         </div>
       </div>
     </header>
-
-    <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" style="display: none;">
-    	<div class="modal-dialog" role="document">
-    		<div class="modal-content">
-    			<div class="modal-header">
-    				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
-    				<h4 class="modal-title" id="gridModalLabel"></h4>
-    			</div>
-    			<div class="modal-body">
-            <h4 id="message"></h4>
-    			</div>
-    			<div class="modal-footer">
-    				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-    			</div>
-    		</div><!-- /.modal-content -->
-    	</div><!-- /.modal-dialog -->
-    </div><!-- /.modal -->
 
 <!-- body will be connected here by handlebars -->
 {{{ body }}}

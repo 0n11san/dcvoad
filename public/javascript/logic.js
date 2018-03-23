@@ -16,7 +16,7 @@ function userAuthen() {
     $("#message").html("Usernames must be atleast 6 characters long and cannot be longer than 10 characters. Please try again");
     $('#myModal').modal("show");
     userinput.attr('status', 'incomplete');
-    userinput.css('background-color', '#ed6250');
+    userinput.css('background-color', '#f77b7b');
   }
 };
 
@@ -40,7 +40,7 @@ function passwordAuthen() {
     $("#message").html("Passwords must be atleast 8 characters long and cannot be longer than 16 characters. Please try again");
     $('#myModal').modal("show");
     passwordType.attr('status', 'incomplete');
-    passwordType.css('background-color', '#ed6250');
+    passwordType.css('background-color', '#f77b7b');
   }
 };
 
@@ -54,7 +54,7 @@ function orgNameAuthen() {
     $("#message").html("Please fill out the Organization Name section in order to move forward.");
     $('#myModal').modal("show");
     orgInput.attr('status', 'incomplete');
-    orgInput.css('background-color', '#ed6250');
+    orgInput.css('background-color', '#f77b7b');
   }
 };
 
@@ -68,7 +68,7 @@ function orgWebsiteAuthen() {
     $("#message").html("Please provide a valid website.");
     $('#myModal').modal("show");
     orgWebsite.attr('status', 'incomplete');
-    orgWebsite.css('background-color', '#ed6250');
+    orgWebsite.css('background-color', '#f77b7b');
   }
 };
 
@@ -83,7 +83,7 @@ function orgEmailAuthen() {
     $("#message").html("Please provide a valid email.");
     $('#myModal').modal("show");
     orgEmail.attr('status', 'incomplete');
-    orgEmail.css('background-color', '#ed6250');
+    orgEmail.css('background-color', '#f77b7b');
   }
 };
 
@@ -98,7 +98,7 @@ function orgNumberAuthen() {
     $("#message").html("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
     $('#myModal').modal("show");
     orgNumber.attr('status', 'incomplete');
-    orgNumber.css('background-color', '#ed6250');
+    orgNumber.css('background-color', '#f77b7b');
   }
 };
 
@@ -112,7 +112,7 @@ function exten1Authen() {
     $("#message").html("The extension you have entered it too long. Max 20 characters.");
     $('#myModal').modal("show");
     extInput.attr('status', 'incomplete');
-    extInput.css('background-color', '#ed6250');
+    extInput.css('background-color', '#f77b7b');
   }
 };
 
@@ -126,7 +126,7 @@ function blurbAuthen() {
     $("#message").html("Your Blurb has too many character. Max length in 1000. Please edit and try again.");
     $('#myModal').modal("show");
     blurbInput.attr('status', 'incomplete');
-    blurbInput.css('background-color', '#ed6250');
+    blurbInput.css('background-color', '#f77b7b');
   }
 };
 
@@ -142,7 +142,7 @@ function getSiteConsent() {
   } else {
     siteConsent = "No"
     answer1Id.attr('status', 'incomplete');
-    answer1Id.css('background-color', '#ed6250');
+    answer1Id.css('background-color', '#f77b7b');
     $("#message").html("Please consent to allow us access to the information you've provided.");
     $('#myModal').modal("show");
   }
@@ -158,7 +158,7 @@ function mppConAuthen() {
     $("#message").html("Please fill out the Meeting Planning Point of Contact Name section in order to move forward.");
     $('#myModal').modal("show");
     mppConInput.attr('status', 'incomplete');
-    mppConInput.css('background-color', '#ed6250');
+    mppConInput.css('background-color', '#f77b7b');
   }
 };
 
@@ -172,7 +172,7 @@ function EmergenConNameAuthen() {
     $("#message").html("Please fill out the Emergency Contact Name section in order to move forward.");
     $('#myModal').modal("show");
     emergConInput.attr('status', 'incomplete');
-    emergConInput.css('background-color', '#ed6250');
+    emergConInput.css('background-color', '#f77b7b');
   }
 };
 
@@ -187,7 +187,7 @@ function mppEmailAuthen() {
     $("#message").html("Please provide a valid email.");
     $('#myModal').modal("show");
     mppEmail.attr('status', 'incomplete');
-    mppEmail.css('background-color', '#ed6250');
+    mppEmail.css('background-color', '#f77b7b');
   }
 };
 
@@ -201,7 +201,7 @@ function addressAuthen() {
     $("#message").html("I am sorry the address you have provided is too long. Max is 255 characters.");
     $('#myModal').modal("show");
     addressInput.attr('status', 'incomplete');
-    addressInput.css('background-color', '#ed6250');
+    addressInput.css('background-color', '#f77b7b');
   }
 };
 
@@ -215,7 +215,7 @@ function cityAuthen() {
     $("#message").html("I am sorry the city you have provided is too long.");
     $('#myModal').modal("show");
     cityInput.attr('status', 'incomplete');
-    cityInput.css('background-color', '#ed6250');
+    cityInput.css('background-color', '#f77b7b');
   }
 };
 
@@ -229,7 +229,7 @@ function stateAuthen() {
     $("#message").html("I am sorry the state you have provided is too long.");
     $('#myModal').modal("show");
     stateInput.attr('status', 'incomplete');
-    stateInput.css('background-color', '#ed6250');
+    stateInput.css('background-color', '#f77b7b');
   }
 };
 
@@ -244,7 +244,7 @@ function postCodeAuthen() {
     $("#message").html("The Postal Code you have provided is not correct. Max 5 numbers. Please correct.");
     $('#myModal').modal("show");
     postCodeInput.attr('status', 'incomplete');
-    postCodeInput.css('background-color', '#ed6250');
+    postCodeInput.css('background-color', '#f77b7b');
   }
 };
 
@@ -259,7 +259,7 @@ function emerg1NumberAuthen() {
     $("#message").html("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
     $('#myModal').modal("show");
     emerg1Number.attr('status', 'incomplete');
-    emerg1Number.css('background-color', '#ed6250');
+    emerg1Number.css('background-color', '#f77b7b');
   }
 };
 
@@ -274,7 +274,7 @@ function emerg2NumberAuthen() {
     $("#message").html("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
     $('#myModal').modal("show");
     emerg2Number.attr('status', 'incomplete');
-    emerg2Number.css('background-color', '#ed6250');
+    emerg2Number.css('background-color', '#f77b7b');
   }
 };
 
@@ -288,7 +288,7 @@ function emergExt1Authen() {
     $("#message").html("The extension you have entered it too long. Max 20 characters.");
     $('#myModal').modal("show");
     emergExtInput.attr('status', 'incomplete');
-    emergExtInput.css('background-color', '#ed6250');
+    emergExtInput.css('background-color', '#f77b7b');
   }
 };
 
@@ -302,7 +302,7 @@ function emergExt2Authen() {
     $("#message").html("The extension you have entered it too long. Max 20 characters.");
     $('#myModal').modal("show");
     emergExtInput.attr('status', 'incomplete');
-    emergExtInput.css('background-color', '#ed6250');
+    emergExtInput.css('background-color', '#f77b7b');
   }
 };
 
@@ -318,7 +318,7 @@ function emergConEmailAuthen() {
     $("#message").html("Please provide a valid email address.");
     $('#myModal').modal("show");
     emergConEmail.attr('status', 'incomplete');
-    emergConEmail.css('background-color', '#ed6250');
+    emergConEmail.css('background-color', '#f77b7b');
   }
 };
 
@@ -334,7 +334,7 @@ function getcontactConsent() {
   } else {
     contactConsent = "No"
     answer2Id.attr('status', 'incomplete');
-    answer2Id.css('background-color', '#ed6250');
+    answer2Id.css('background-color', '#f77b7b');
     $("#message").html("Please consent to allows us to contact you during disaster response exercises in our to move forward.");
     $('#myModal').modal("show");
   }

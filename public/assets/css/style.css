@@ -3,7 +3,7 @@ CSS Reset
 --------------------------------------------------------------*/
 
 html {
-  font-family: sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -69,22 +69,13 @@ body {
 }
 
 .voad-navbar>a {
-  align-content: center;
   display: flex;
   align-items: center;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
 
 }
 
 .voad-navbar>img {
-  align-content: center;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
+
 
 }
 
@@ -165,12 +156,13 @@ Typography
 
 body, button, input, select, textarea {
   color: #404040;
-  font-family: 'Helvetica', Arial, sans-serif;
-  font-size: 18px;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 22px;
   line-height: 1.5;
 }
 
 h1, h2, h3 {
+  font-family: 'IBM Plex Serif', serif;
   text-align: center;
   margin: 0;
   padding: 1em 0;
@@ -363,14 +355,20 @@ CSS Grid layout for wider screens, when browser supports grid:
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 1fr 5fr 1fr 5fr 1fr;
+  grid-template-columns: 5fr 1fr 1fr ;
   min-height: 50em;
 }
 
 #VOAD-logo {
-  margin-top: 10px;
+  margin-top: .25em;
   min-height: 5em;
-  min-width: 5em;
+  min-width: 17em;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 
 }
 
@@ -391,6 +389,7 @@ CSS Grid layout for wider screens, when browser supports grid:
 .form-control {
   display: grid;
   grid-template-columns: 1fr;
+  text-indent: 1em;
   width: 100%;
   border: 0px;
   outline: none;
@@ -398,9 +397,9 @@ CSS Grid layout for wider screens, when browser supports grid:
   border-radius: 5px;
   margin-bottom: 10px;
   margin-top: 5px;
-  font-family: sans-serif,Arial;
-  font-size: 16px;
-  background-color: orange;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 22px;
+  background-color: #f9bc75;
   padding-top: 1em;
   padding-bottom: 1em;
   text

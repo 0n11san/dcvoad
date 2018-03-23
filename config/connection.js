@@ -12,7 +12,7 @@ if (process.env.JAWSDB_URL) {
     port: 3306,
     host: "localhost",
     user: "root",
-    password: "B00kw0rm!",
+    password: "",
     database: "voad_db"
   });
 };

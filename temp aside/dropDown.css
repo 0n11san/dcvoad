@@ -77,8 +77,8 @@ nav{
 .login-form>form{
   width: 250px;
   margin: 25px auto;
-  font-size: 20px;
-  font-family: sans-serif,Arial;
+  font-size: 22px;
+  font-family: 'Roboto Condensed', sans-serif;
   color: gray;
   letter-spacing: -0.05em;
 }
