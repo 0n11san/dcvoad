@@ -1,3 +1,13 @@
+// function loaduserinfo() {
+//   $.put("/api/user", updateUser)
+//     .done(function(data) {
+//       console.log("*********");
+//       console.log(data);
+//       $("#message").html("Your user infomation has been updated.");
+//       $('#myModal').modal("show");
+//     });
+// }
+
 $(document).ready(function() {
 
 
@@ -89,9 +99,16 @@ $(document).ready(function() {
 
               $.put("/api/user", updateUser)
                 .done(function(data) {
-                  console.log("*********");
-                  console.log(data);
-                  $("#message").html("Your user infomation has been updated.");
+                  $.ajax("/api/cats/" + id, {
+                    type: "PUT",
+                    data: newSleepState
+                  }).then(
+                    function() {
+                      console.log("changed sleep to", newSleep);
+                      // Reload the page to get the updated list
+                      location.reload();
+                    }
+                  );                  $("#message").html("Your user infomation has been updated.");
                   $('#myModal').modal("show");
                 });
 
