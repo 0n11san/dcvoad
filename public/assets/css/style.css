@@ -342,11 +342,15 @@ CSS Grid layout for wider screens, when browser supports grid:
 /* This part effects the About Page */
 
 #aboutOrgInfo {
+  text-align: center;
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-columns: 5fr 1fr 1fr ;
-  min-height: 50em;
+  grid-template-columns: 1fr;
+  min-height: 20em;
+  padding-left: 10em;
+  padding-right: 10em;
+  padding-bottom: 10em;
 }
 
 #VOAD-logo {
