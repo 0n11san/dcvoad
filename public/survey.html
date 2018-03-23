@@ -11,10 +11,6 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
   <script type="text/javascript" src="javascript/logic.js"></script>
-  </script>
-
-  <script type="text/javascript" src="javascript/csv-dl.js"></script>
-  </script>
 
 </head>
 
@@ -159,7 +155,7 @@
 
             <div class="form-group">
               <label for="force-points">Emergency Contact Email Address</label>
-              <input type="text" class="form-control" id="emergency_contact_email" status="complete" onchange="emergConEmailAuthen()">
+              <input type="text" class="form-control" id="emergency_contact_email" status="incomplete" onchange="emergConEmailAuthen()">
             </div>
 
             <div class="form-group">
@@ -180,7 +176,7 @@
   </div>
   </div>
 
-  <div id="myModal" class="modal fade" role="dialog">
+  <div id="myModal" class="modal" role="dialog">
     <div class="modal-dialog">
 
       <!-- Modal content-->

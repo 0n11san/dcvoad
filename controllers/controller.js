@@ -54,7 +54,7 @@ router.get("/", function(req, res) {
 router.get("/register", function(req, res) {
   survey.all(function(data) {
     var hbsObject = {
-      user: data
+      survey: data
     };
     console.log(hbsObject);
     res.render("survey", hbsObject);
