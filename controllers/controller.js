@@ -94,7 +94,7 @@ router.get("/about", function(req, res) {
 //   });
 // });
 
-router.get("/user", function(req, res) {
+router.get("/user/:id", function(req, res) {
   user.all(function(data) {
     var hbsObject = {
       user: data
