@@ -1,6 +1,9 @@
 <div id="surveyblock">
 
-  <h3 class="panel-title"><strong>If your information has changed, please update it below.</strong></h3>
+  <h1>DCVOAD</h1>
+
+
+<h3 class="panel-title"><strong>If your information has changed, please update it below.</strong></h3>
   <div class="row">
     <div class="col-lg-3">
     </div>
@@ -30,7 +33,7 @@
 
             <div class="form-group">
               <label for="age">Public Contact Phone Number extension</label>
-              <input type="text" class="form-control" id="extension1" status="complete" onchange="exten1Authen">
+              <input type="text" class="form-control" id="extension1" status="complete" onchange="exten1Authen()">
             </div>
 
             <div class="form-group">
@@ -41,18 +44,6 @@
             <div class="form-group">
               <label for="role">Blurb about Organization (1000 characters or less)</label>
               <input type="text" class="form-control" id="blurb" status="complete" onchange="blurbAuthen()">
-            </div>
-
-            <div class="form-group">
-              <label for="role">I consent to have the above information listed on the DCVOAD website *</label>
-              <select id="choice1" status="incomplete" onchange="getSiteConsent()">
-                  <option value="No">No</option>
-                  <option value="Yes">Yes</option>
-                </select>
-            </div>
-
-            <div class="panel-heading">
-              <h3 class="panel-title"><strong>Restricted Information</strong></h3>
             </div>
 
             <div class="form-group">
@@ -67,22 +58,20 @@
 
             <div class="form-group">
               <label for="force-points">Organization Address *</label>
-              <input type="text" class="form-control" id="address" placeholder="Address" status="incomplete" onchange="addressAuthen()">
-              <div class="address-three">
-                <input type="text" class="form-control" id="city" placeholder="City" status="incomplete" onchange="cityAuthen()">
-                <input type="text" class="form-control" id="state" placeholder="State" status="incomplete" onchange="stateAuthen()">
-                <input type="text" class="form-control" id="post_code" placeholder="Postal Code" status="incomplete" onchange="postCodeAuthen()">
-              </div>
+              <input type="text" class="form-control" id="address" placeholder="Address" status="complete" onchange="addressAuthen()">
+              <input type="text" class="form-control" id="city" placeholder="City" status="complete" onchange="cityAuthen()">
+              <input type="text" class="form-control" id="state" placeholder="State" status="complete" onchange="stateAuthen()">
+              <input type="text" class="form-control" id="post_code" placeholder="Postal Code" status="complete" onchange="postCodeAuthen()">
             </div>
 
             <div class="form-group">
               <label for="name">Emergency Point of Contact Name *</label>
-              <input type="text" class="form-control" id="emergency_contact" status="incomplete" onchange="EmergenConNameAuthen()">
+              <input type="text" class="form-control" id="emergency_contact" status="complete" onchange="EmergenConNameAuthen()">
             </div>
 
             <div class="form-group">
               <label for="phoneNumber">Emergency Contact Phone Number 1 *</label>
-              <input type="text" class="form-control" id="emerg_con_tel_number1" placeholder="Format: XXX-XXX-XXXX" status="incomplete" onchange="emerg1NumberAuthen()">
+              <input type="text" class="form-control" id="emerg_con_tel_number1" placeholder="Format: XXX-XXX-XXXX" status="complete" onchange="emerg1NumberAuthen()">
             </div>
 
             <div class="form-group">
@@ -105,41 +94,12 @@
               <input type="text" class="form-control" id="emergency_contact_email" status="complete" onchange="emergConEmailAuthen()">
             </div>
 
-
-
-            <div class="form-group">
-              <label for="contactConsent">This point of contact consents to be contacted during official disaster response exercises *</label>
-              <select id="choice2" status="incomplete" onchange="getcontactConsent()">
-                            <option value"No">No</option>
-                            <option value="Yes">Yes</option>
-                          </select>
-            </div>
-
           </form>
         </div>
       </div>
       <div class="text-right">
-        <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-fire"></span>Save Changes</button>
+        <button type="submit" class="btn btn-primary btn-md" id="save-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-fire"></span>Save Changes</button>
       </div>
     </div>
 
-    <div id="myModal" class="modal fade" role="dialog">
-      <div class="modal-dialog">
-
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title"></h4>
-          </div>
-          <div class="modal-body">
-            <p id="message"></p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>

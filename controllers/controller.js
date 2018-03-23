@@ -84,15 +84,15 @@ router.get("/about", function(req, res) {
 });
 
 // User page
-router.get("/user", function(req, res) {
-  survey.all(function(data) {
-    var hbsObject = {
-      user: data
-    };
-    console.log(hbsObject);
-    res.render("user", hbsObject);
-  });
-});
+// router.get("/user", function(req, res) {
+//   survey.all(function(data) {
+//     var hbsObject = {
+//       user: data
+//     };
+//     console.log(hbsObject);
+//     res.render("user", hbsObject);
+//   });
+// });
 
 router.get("/user", function(req, res) {
   user.all(function(data) {
