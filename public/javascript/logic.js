@@ -13,8 +13,7 @@ function userAuthen() {
     userinput.attr('status', 'complete');
     userinput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Usernames must be atleast 6 characters long and cannot be longer than 10 characters. Please try again");
-    $('#myModal').modal("show");
+    alert("Usernames must be atleast 6 characters long and cannot be longer than 10 characters. Please try again");
     userinput.attr('status', 'incomplete');
     userinput.css('background-color', '#ed6250');
   }
@@ -37,8 +36,7 @@ function passwordAuthen() {
     passwordType.attr('status', 'complete');
     passwordType.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Passwords must be atleast 8 characters long and cannot be longer than 16 characters. Please try again");
-    $('#myModal').modal("show");
+    alert("Passwords must be atleast 8 characters long and cannot be longer than 16 characters. Please try again");
     passwordType.attr('status', 'incomplete');
     passwordType.css('background-color', '#ed6250');
   }
@@ -51,8 +49,7 @@ function orgNameAuthen() {
     orgInput.attr('status', 'complete');
     orgInput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Please fill out the Organization Name section in order to move forward.");
-    $('#myModal').modal("show");
+    alert("Please fill out the Organization Name section in order to move forward.");
     orgInput.attr('status', 'incomplete');
     orgInput.css('background-color', '#ed6250');
   }
@@ -65,8 +62,7 @@ function orgWebsiteAuthen() {
     orgWebsite.attr('status', 'complete');
     orgWebsite.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Please provide a valid website.");
-    $('#myModal').modal("show");
+    alert("Please provide a valid website.");
     orgWebsite.attr('status', 'incomplete');
     orgWebsite.css('background-color', '#ed6250');
   }
@@ -80,8 +76,7 @@ function orgEmailAuthen() {
     orgEmail.attr('status', 'complete');
     orgEmail.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Please provide a valid email.");
-    $('#myModal').modal("show");
+    alert("Please provide a valid email.");
     orgEmail.attr('status', 'incomplete');
     orgEmail.css('background-color', '#ed6250');
   }
@@ -95,8 +90,7 @@ function orgNumberAuthen() {
     orgNumber.attr('status', 'complete');
     orgNumber.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
-    $('#myModal').modal("show");
+    alert("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
     orgNumber.attr('status', 'incomplete');
     orgNumber.css('background-color', '#ed6250');
   }
@@ -109,8 +103,7 @@ function exten1Authen() {
     extInput.attr('status', 'complete');
     extInput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("The extension you have entered it too long. Max 20 characters.");
-    $('#myModal').modal("show");
+    alert("The extension you have entered it too long. Max 20 characters.");
     extInput.attr('status', 'incomplete');
     extInput.css('background-color', '#ed6250');
   }
@@ -123,8 +116,7 @@ function blurbAuthen() {
     blurbInput.attr('status', 'complete');
     blurbInput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Your Blurb has too many character. Max length in 1000. Please edit and try again.");
-    $('#myModal').modal("show");
+    alert("Your Blurb has too many character. Max length in 1000. Please edit and try again.");
     blurbInput.attr('status', 'incomplete');
     blurbInput.css('background-color', '#ed6250');
   }
@@ -143,8 +135,7 @@ function getSiteConsent() {
     siteConsent = "No"
     answer1Id.attr('status', 'incomplete');
     answer1Id.css('background-color', '#ed6250');
-    $("#message").html("Please consent to allow us access to the information you've provided.");
-    $('#myModal').modal("show");
+    alert("Please consent to allow us access to the information you've provided.");
   }
 }
 
@@ -155,8 +146,7 @@ function mppConAuthen() {
     mppConInput.attr('status', 'complete');
     mppConInput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Please fill out the Meeting Planning Point of Contact Name section in order to move forward.");
-    $('#myModal').modal("show");
+    alert("Please fill out the Meeting Planning Point of Contact Name section in order to move forward.");
     mppConInput.attr('status', 'incomplete');
     mppConInput.css('background-color', '#ed6250');
   }
@@ -169,8 +159,7 @@ function EmergenConNameAuthen() {
     emergConInput.attr('status', 'complete');
     emergConInput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Please fill out the Emergency Contact Name section in order to move forward.");
-    $('#myModal').modal("show");
+    alert("Please fill out the Emergency Contact Name section in order to move forward.");
     emergConInput.attr('status', 'incomplete');
     emergConInput.css('background-color', '#ed6250');
   }
@@ -184,8 +173,7 @@ function mppEmailAuthen() {
     mppEmail.attr('status', 'complete');
     mppEmail.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Please provide a valid email.");
-    $('#myModal').modal("show");
+    alert("Please provide a valid email.");
     mppEmail.attr('status', 'incomplete');
     mppEmail.css('background-color', '#ed6250');
   }
@@ -198,8 +186,7 @@ function addressAuthen() {
     addressInput.attr('status', 'complete');
     addressInput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("I am sorry the address you have provided is too long. Max is 255 characters.");
-    $('#myModal').modal("show");
+    alert("I am sorry the address you have provided is too long. Max is 255 characters.");
     addressInput.attr('status', 'incomplete');
     addressInput.css('background-color', '#ed6250');
   }
@@ -212,8 +199,7 @@ function cityAuthen() {
     cityInput.attr('status', 'complete');
     cityInput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("I am sorry the city you have provided is too long.");
-    $('#myModal').modal("show");
+    alert("I am sorry the city you have provided is too long.");
     cityInput.attr('status', 'incomplete');
     cityInput.css('background-color', '#ed6250');
   }
@@ -226,8 +212,7 @@ function stateAuthen() {
     stateInput.attr('status', 'complete');
     stateInput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("I am sorry the state you have provided is too long.");
-    $('#myModal').modal("show");
+    alert("I am sorry the state you have provided is too long.");
     stateInput.attr('status', 'incomplete');
     stateInput.css('background-color', '#ed6250');
   }
@@ -241,8 +226,7 @@ function postCodeAuthen() {
     postCodeInput.attr('status', 'complete');
     postCodeInput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("The Postal Code you have provided is not correct. Max 5 numbers. Please correct.");
-    $('#myModal').modal("show");
+    alert("The Postal Code you have provided is not correct. Max 5 numbers. Please correct.");
     postCodeInput.attr('status', 'incomplete');
     postCodeInput.css('background-color', '#ed6250');
   }
@@ -256,8 +240,7 @@ function emerg1NumberAuthen() {
     emerg1Number.attr('status', 'complete');
     emerg1Number.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
-    $('#myModal').modal("show");
+    alert("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
     emerg1Number.attr('status', 'incomplete');
     emerg1Number.css('background-color', '#ed6250');
   }
@@ -271,8 +254,7 @@ function emerg2NumberAuthen() {
     emerg2Number.attr('status', 'complete');
     emerg2Number.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
-    $('#myModal').modal("show");
+    alert("Phone Number did not match the format of XXX-XXX-XXXX. Please correct.");
     emerg2Number.attr('status', 'incomplete');
     emerg2Number.css('background-color', '#ed6250');
   }
@@ -285,8 +267,7 @@ function emergExt1Authen() {
     emergExtInput.attr('status', 'complete');
     emergExtInput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("The extension you have entered it too long. Max 20 characters.");
-    $('#myModal').modal("show");
+    alert("The extension you have entered it too long. Max 20 characters.");
     emergExtInput.attr('status', 'incomplete');
     emergExtInput.css('background-color', '#ed6250');
   }
@@ -299,8 +280,7 @@ function emergExt2Authen() {
     emergExtInput.attr('status', 'complete');
     emergExtInput.css('background-color', '#4ae896');
   } else {
-    $("#message").html("The extension you have entered it too long. Max 20 characters.");
-    $('#myModal').modal("show");
+    alert("The extension you have entered it too long. Max 20 characters.");
     emergExtInput.attr('status', 'incomplete');
     emergExtInput.css('background-color', '#ed6250');
   }
@@ -315,8 +295,7 @@ function emergConEmailAuthen() {
     emergConEmail.attr('status', 'complete');
     emergConEmail.css('background-color', '#4ae896');
   } else {
-    $("#message").html("Please provide a valid email address.");
-    $('#myModal').modal("show");
+    alert("Please provide a valid email address.");
     emergConEmail.attr('status', 'incomplete');
     emergConEmail.css('background-color', '#ed6250');
   }
@@ -335,8 +314,7 @@ function getcontactConsent() {
     contactConsent = "No"
     answer2Id.attr('status', 'incomplete');
     answer2Id.css('background-color', '#ed6250');
-    $("#message").html("Please consent to allows us to contact you during disaster response exercises in our to move forward.");
-    $('#myModal').modal("show");
+    alert("Please consent to allows us to contact you during disaster response exercises in our to move forward.");
   }
 }
 
@@ -436,13 +414,11 @@ function submittingNewInfo() {
         console.log("*********");
         console.log(data);
         console.log("created new user");
-        $("#message").html("New User has been added.");
-        $('#myModal').modal("show");
+        alert("New User has been added.");
       });
 
   } else {
-    $("#message").html("It appears that all the required fields have not been filled out correctly. Please review the information you provided and resubmit.");
-    $('#myModal').modal("show");
+    alert("It appears that all the required fields have not been filled out correctly. Please review the information you provided and resubmit.");
   }
 };
 
@@ -452,8 +428,7 @@ function creatingSurvey(newSurvey) {
     .done(function(data) {
       console.log("*********");
       console.log(data);
-      $("#message").html("New Survey has been added.");
-      $('#myModal').modal("show");
+      alert("New Survey has been added.");
     });
 };
 
