@@ -22,10 +22,10 @@ var user = require("../models/user.js");
 //   res.json(data)
 // });
 //
-// //new test Page
-// router.get("/test", function(req, res) {
-//     res.render("test");
-// });
+//new test Page
+router.get("/test", function(req, res) {
+    res.render("test");
+});
 
 // Create all our routes and set up logic within those routes where required.
 // Get your survey data
@@ -61,7 +61,7 @@ router.get("/register", function(req, res) {
   });
 });
 
-// About page
+// Members page
 router.get("/members", function(req, res) {
   survey.all(function(data) {
     var hbsObject = {
@@ -72,14 +72,14 @@ router.get("/members", function(req, res) {
   });
 });
 
-// Member page
+// About page
 router.get("/about", function(req, res) {
   survey.all(function(data) {
     var hbsObject = {
       user: data
     };
     console.log(hbsObject);
-    res.render("user", hbsObject);
+    res.render("about", hbsObject);
   });
 });
 
