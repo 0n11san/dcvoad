@@ -10,18 +10,17 @@ var user = require("../models/user.js");
 
 //get all DB database
 // Get your survey data
+router.get("/api/test", function(req, res) {
+  var data = [
+    {name: "Jon"},
+    {name: "Patrick"},
+    {name: "Nathan"},
+    {name: "Jen"},
+    {name: "Jamal"}
+  ];
+  res.json(data)
+});
 
-// router.get("/api/test", function(req, res) {
-//   var data = [
-//     {name: "Jon"},
-//     {name: "Patrick"},
-//     {name: "Nathan"},
-//     {name: "Jen"},
-//     {name: "Jamal"}
-//   ];
-//   res.json(data)
-// });
-//
 //new test Page
 router.get("/test", function(req, res) {
     res.render("test");
