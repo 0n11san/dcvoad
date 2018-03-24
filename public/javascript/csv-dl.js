@@ -1,25 +1,55 @@
+console.log("hello");
+
 //require the database
 var CSVinfo = []; //Array that will contain all info from database (minus sensitive info)
+
+//////////////////////
+$.get('api/test2', function(res){
+console.log("test")
+console.log(res)
+     // Get Profile User Data Using data-attributes.
+
+     let uName = res.full_name;
+     let uId = res.id;
+     let uColor = res.color;
+     let uEmail = res.email;
+     let uLocation = res.location;
+     let uBio = res.bio;
+     let uGoalCount = res.goal_count;
+     let uInitials = function(){
+
+       let splitName = uName.toUpperCase().split(' ');
+
+       let initials = splitName[0].charAt(0) + splitName[1].charAt(0);
+
+       // Directly return the joined string
+
+       return initials.trim();
+
+     }
+   });
+/////////////////////////
+
 $(document).ready(function() {
     // http request
-      $.getJSON("/api/test", function(data) {
+      $.getJSON("/test2", function(data) {
         console.log(data);
           $.each(data, function(i, val){
          // CSVinfo.push(val);
          // document.getElementById("test").append("<p>"+val.name+"</p>");
          var node = document.createElement("LI");                 // Create a <li> node
-var textnode = document.createTextNode(val.name);         // Create a text node
+var textnode = document.createTextNode(val.orgName);
+        // Create a text node
 node.appendChild(textnode);                              // Append the text to <li>
 document.getElementById("test").appendChild(node);     // Append <li> to <ul> with id="myList"
 
           });
     // alert(CSVinfo) ;
        });
-
-
        ////////////////////////////
 
 
+ // res.render('goalObj');
 
        var doc = new jsPDF();
        var specialElementHandlers = {
