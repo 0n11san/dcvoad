@@ -11,18 +11,66 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="javascript/logic.js"></script>
 
+
+  <!-- //////////////////////////////////////////////////////////// -->
+  <!-- dropDown bootstrap scrips -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   <!-- dropDown javascript -->
   <script type="text/javascript" src="javascript/dropDown.js"></script>
+  <!-- //////////////////////////////////////////////////////////// -->
 
+
+
+  <!-- bootstrap link -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- /*custom css*/ -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link rel="stylesheet" type="text/css" href="assets/css/dropDown.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/dropDownStyle.styl">
 
   <!-- <script type="text/javascript" src="javascript/csv-dl.js"></script> -->
 
 <!-- //source: https://github.com/MrRio/jsPDF -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js" integrity="sha384-CchuzHs077vGtfhGYl9Qtc7Vx64rXBXdIAZIPbItbNyWIRTdG0oYAqki3Ry13Yzu" crossorigin="anonymous"></script>
+
+  <!-- <script src="javascript/js/dropDown.js">
+  </script> -->
+
+
+  <script src="javascript/js/controllers/homeController.js">
+  </script>
+  <script src="javascript/js/controllers/loginController.js">
+  </script>
+  <script src="javascript/js/controllers/signupController.js">
+  </script>
+  <script src="javascript/js/formValidators/accountValidator.js">
+  </script>
+  <script src="javascript/js/formValidators/emailValidator.js">
+  </script>
+  <script src="javascript/js/formValidators/loginValidator.js">
+  </script>
+  <script src="javascript/js/formValidators/resetValidator.js">
+  </script>
+  <script src="javascript/js/views/home.js">
+  </script>
+  <script src="javascript/js/views/login.js">
+  </script>
+  <script src="javascript/js/views/reset.js">
+  </script>
+  <script src="javascript/js/views/signup.js">
+  </script>
+  <script src="server/moduels/account-manager.js">
+  </script>
+  <script src="javascript/js/modals/country-list.js">
+  </script>
+  <script src="javascript/js/modals/email-dispatcher.js">
+  </script>
+
+<!-- ? <script src="https://nodejs-login.herokuapp.com"></script> ? -->
 
 </head>
 
@@ -41,14 +89,57 @@
           <div>
             <!-- <section class="nav-container"> -->
 
+<!-- old dropdown button -->
+<!-- //////////////////////////// -->
               <!-- <aside class="menu"> -->
                 <div class="menu-content">
-                  <i class="fa fa-unlock-alt"></i><a href="#" id="login">Login</a> | <i class="fa fa-user"></i><a href="/register">Register</a>
+                  <i class="fa fa-unlock-alt"></i><a href="javascript/dropDown.js" id="login">Login</a> | <i class="fa fa-user"></i><a href="/register">Register</a>
                 </div>
                 <div class="arrow-up"></div>
-              </aside>
-              <!-- Dropdown for the login -->
-              <div class="login-form">
+              <!-- </aside> -->
+<!-- //////////////////////////// -->
+<script src="javascript/js/controllers/homeController.js">
+</script>
+<script src="javascript/js/controllers/loginController.js">
+</script>
+
+<script src="javascript/js/controllers/signupController.js">
+</script>
+
+<script src="javascript/js/formValidators/accountValidator.js">
+</script>
+
+<script src="javascript/js/formValidators/emailValidator.js">
+</script>
+
+<script src="javascript/js/formValidators/loginValidator.js">
+</script>
+
+<script src="javascript/js/formValidators/resetValidator.js">
+</script>
+
+<script src="javascript/js/views/home.js">
+</script>
+
+<script src="javascript/js/views/login.js">
+</script>
+
+<script src="javascript/js/views/reset.js">
+</script>
+
+<script src="javascript/js/views/signup.js">
+</script>
+
+<script src="server/moduels/account-manager.js">
+</script>
+
+<script src="javascript/js/modals/country-list.js">
+</script>
+
+<script src="javascript/js/modals/email-dispatcher.js">
+</script>
+              <!-- old Dropdown for the login -->
+              <!-- <div class="login-form">
                 <form>
                   <label>Username</label>
                   <div>
@@ -65,9 +156,9 @@
                     <a href="#" style="text-decoration:none;position:relative;top:20px;font-size:16px;color:gray;">Lost Your Password?</a>
                   </div>
                 </form>
-                <form>
+                <form> -->
                   <!-- Dropdown for the register -->
-                  <div class="register-form">
+                  <!-- <div class="register-form">
                     <form>
                       <label>Username</label>
                       <div>
@@ -87,13 +178,15 @@
                     </form>
                   </div>
             </section>
-            </div>
+            </div> -->
+            <!-- old Dropdown for the login -->
+
         </div>
 
       <!-- </nav> -->
 
       </div>
-
+</div>
       {{{ body }}}
 
   </header>

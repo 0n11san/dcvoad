@@ -1,4 +1,7 @@
-
+// dynamic dropdown to login into the navxxxxxxx
+<html>
+  <head>
+  <script type="text/javascript">
     $(document).ready(function() {
       var arrow = $(".arrow-up");
       var loginForm = $(".login-form");
@@ -6,9 +9,9 @@
       var status = false;
       $("#login").click(function(event) {
         event.preventDefault();
-      // $("#register").click(function(event) {
-      //   event.preventDefault();
-        // alert(0);
+      // $("#register").click(function(event)xxxxxxx {
+        // event.preventDefault();xxxxxxx
+        // alert(0);xxxxxxxxxxxx
         if (status == false) {
           arrow.fadeIn();
           loginForm.fadeIn();
@@ -21,9 +24,9 @@
       })
       $("#register").click(function(event) {
         event.preventDefault();
-      // $("#register").click(function(event) {
-      //   event.preventDefault();
-        // alert(0);
+      // $("#register").click(function(event) {xxxxxxxxx
+        // event.preventDefault();xxxxxxxxx
+        // alert(0);xxxxxxxxxx
         if (status == false) {
           arrow.fadeIn();
           registerForm.fadeIn();
@@ -35,3 +38,6 @@
         }
       })
     });
+  </script>
+</head>
+</html>
