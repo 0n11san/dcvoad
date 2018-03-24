@@ -1,5 +1,5 @@
 <div id="surveyblock">
-  <div class="row">
+  <!-- <div class="row">
     <div class="col-lg-3">
     </div>
     <div class="col-lg-6">
@@ -29,9 +29,9 @@
     </div>
     <div class="col-lg-3">
     </div>
-  </div>
+  </div> -->
 
-  <h3>Please add your organizaton's information:</h3>
+  <h1>Survey:</h3>
   <div class="row">
     <div class="col-lg-3">
     </div>
@@ -54,19 +54,17 @@
               <br />
               <input type="text" class="form-control" id="orgWebsite" status="incomplete" onchange="orgWebsiteAuthen()">
             </div>
-
-            <div class="form-group">
-              <label for="age">Public Contact Phone Number *</label>
-              <br />
-              <input type="text" class="form-control" id="orgNumber" placeholder="Format: XXX-XXX-XXXX" status="incomplete" onchange="orgNumberAuthen()">
+            <div class="phone-two">
+              <div class="form-group">
+                <label for="age">Public Contact Phone Number *</label>
+                <br />
+                <input type="text" class="form-control" id="orgNumber" placeholder="Format: XXX-XXX-XXXX" status="incomplete" onchange="orgNumberAuthen()">
+              </div>
+              <div class="form-group">
+                <br />
+                <input type="text" class="form-control" id="extension1" placeholder="Ext." status="complete" onchange="exten1Authen()">
+              </div>
             </div>
-
-            <div class="form-group">
-              <label for="age">Extension</label>
-              <br />
-              <input type="text" class="form-control" id="extension1" status="complete" onchange="exten1Authen()">
-            </div>
-
             <div class="form-group">
               <label for="force-points">Public Contact Email Address *</label>
               <br />
@@ -136,29 +134,28 @@
               <br />
               <input type="text" class="form-control" id="emergency_contact" status="incomplete" onchange="EmergenConNameAuthen()">
             </div>
-
-            <div class="form-group">
-              <label for="phoneNumber">Emergency Contact Phone Number 1 *</label>
-              <br />
-              <input type="text" class="form-control" id="emerg_con_tel_number1" placeholder="Format: XXX-XXX-XXXX" status="incomplete" onchange="emerg1NumberAuthen()">
+            <div class="phone-two">
+              <div class="form-group">
+                <label for="phoneNumber">Emergency Contact Phone Number 1 *</label>
+                <br />
+                <input type="text" class="form-control" id="emerg_con_tel_number1" placeholder="Format: XXX-XXX-XXXX" status="incomplete" onchange="emerg1NumberAuthen()">
+              </div>
+              <div class="form-group">
+                <br />
+                <input type="text" class="form-control" id="emerg_extension1" placeholder="Ext." status="complete" onchange="emergExt1Authen()">
+              </div>
             </div>
 
-            <div class="form-group">
-              <label for="extenstion">Extension</label>
-              <br />
-              <input type="text" class="form-control" id="emerg_extension1" status="complete" onchange="emergExt1Authen()">
-            </div>
-
-            <div class="form-group">
-              <label for="phoneNumber">Emergency Contact Phone Number 2</label>
-              <br />
-              <input type="text" class="form-control" id="emerg_con_tel_number2" placeholder="Format: XXX-XXX-XXXX" status="complete" onchange="emerg2NumberAuthen()">
-            </div>
-
-            <div class="form-group">
-              <label for="extenstion">Extension</label>
-              <br />
-              <input type="text" class="form-control" id="emerg_extension2" status="complete" onchange="emergExt2Authen()">
+            <div class="phone-two">
+              <div class="form-group">
+                <label for="phoneNumber">Emergency Contact Phone Number 2</label>
+                <br />
+                <input type="text" class="form-control" id="emerg_con_tel_number2" placeholder="Format: XXX-XXX-XXXX" status="complete" onchange="emerg2NumberAuthen()">
+              </div>
+              <div class="form-group">
+                <br />
+                <input type="text" class="form-control" id="emerg_extension2" placeholder="Ext." status="complete" onchange="emergExt2Authen()">
+              </div>
             </div>
 
             <div class="form-group">
@@ -168,7 +165,7 @@
             </div>
 
             <div class="form-group">
-              <label for="contactConsent">This point of contacts consents to be contacted during official disaster response exercises *</label><br>
+              <label for="contactConsent">This point of contact consents to be contacted during official disaster response efforts and exercises *</label><br>
 
               <select id="choice2" status="incomplete" onchange="getcontactConsent()">
                             <option value"No">No</option>
@@ -178,10 +175,11 @@
             </div>
           </form>
         </div>
-
+        <br />
         <div class="text-right">
           <button type="submit" class="btn btn-primary btn-md" id="add-btn" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-fire"></span> Add information to DCVOAD's records</button>
         </div>
+        <br />
       </div>
     </div>
     <div class="col-lg-3">
