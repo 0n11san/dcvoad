@@ -431,7 +431,7 @@ function creatingSurvey(newSurvey) {
       console.log("*********");
       console.log(data);
       alert("New Survey has been added.");
-      Router.go("/user/:id");
+      // Router.go("/user/:id");
     });
 };
 

@@ -31,6 +31,7 @@ console.log(res)
 /////////////////////////
 
 $(document).ready(function() {
+  getsurveydata();
     // http request
       $.getJSON("/test2", function(data) {
         console.log(data);
@@ -89,4 +90,26 @@ document.getElementById("test").appendChild(node);     // Append <li> to <ul> wi
 //
 // });
 
-///////////////
+
+function getsurveydata(){
+$.get('/api/user', function(res){
+  console,log(res);
+// }.done()
+// console.
+   // Get Profile User Data Using data-attributes.
+
+   // let uName = res.full_name;
+   // let uId = res.id;
+   // let uColor = res.color;
+   // let uEmail = res.email;
+   // let uLocation = res.location;
+   // let uBio = res.bio;
+   // let uGoalCount = res.goal_count;
+   // let uInitials = function(){
+   //   let splitName = uName.toUpperCase().split(' ');
+   //   let initials = splitName[0].charAt(0) + splitName[1].charAt(0);
+   //   // Directly return the joined string
+   //   return initials.trim();
+   // }
+ });
+};
