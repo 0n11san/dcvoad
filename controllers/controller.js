@@ -22,19 +22,6 @@ router.get("/api/test", function(req, res) {
   res.json(data)
 });
 
-router.get("/api/test", function(req, res) {
-
-  var data = [
-    {name: "Jon"},
-    {name: "Patrick"},
-    {name: "Nathan"},
-    {name: "Jen"},
-    {name: "Jamal"}
-  ];
-  res.json(data)
-});
-
-
 //new test Page
 router.get("/test", function(req, res) {
     res.render("test");
@@ -43,11 +30,12 @@ router.get("/test", function(req, res) {
 //2nd test Page
 router.get("/test2", function(req, res) {
     survey.all(function(data) {
+      res.json(data);
       var hbsObject = {
         survey: data
     };
     console.log(hbsObject);
-    res.render("test", hbsObject);
+
 });
 });
 
