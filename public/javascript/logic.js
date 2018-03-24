@@ -417,6 +417,8 @@ function submittingNewInfo() {
         alert("New User has been added.");
       });
 
+
+
   } else {
     alert("It appears that all the required fields have not been filled out correctly. Please review the information you provided and resubmit.");
   }
@@ -429,6 +431,7 @@ function creatingSurvey(newSurvey) {
       console.log("*********");
       console.log(data);
       alert("New Survey has been added.");
+      Router.go("/user/:id");
     });
 };
 
