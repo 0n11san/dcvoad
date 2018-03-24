@@ -1,8 +1,9 @@
 //require the database
 var CSVinfo = []; //Array that will contain all info from database (minus sensitive info)
+
 $(document).ready(function() {
     // http request
-      $.getJSON("/api/test", function(data) {
+      $.getJSON("/test2", function(data) {
         console.log(data);
           $.each(data, function(i, val){
          // CSVinfo.push(val);
@@ -15,11 +16,16 @@ document.getElementById("test").appendChild(node);     // Append <li> to <ul> wi
           });
     // alert(CSVinfo) ;
        });
-
-
        ////////////////////////////
 
-
+//////////////////////
+let goalObj = {
+          id:data.id,
+          orgName: data.orgName,
+          orgWebsite: data.orgWebsite,
+          },
+/////////////////////////
+ res.render('goalObj');
 
        var doc = new jsPDF();
        var specialElementHandlers = {

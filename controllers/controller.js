@@ -27,6 +27,17 @@ router.get("/test", function(req, res) {
     res.render("test");
 });
 
+//2nd test Page
+router.get("/test2", function(req, res) {
+    survey.all(function(data) {
+      var hbsObject = {
+        survey: data
+    };
+    console.log(hbsObject);
+    res.render("test", hbsObject);
+});
+});
+
 // Create all our routes and set up logic within those routes where required.
 // Get your survey data
 router.get("/", function(req, res) {
