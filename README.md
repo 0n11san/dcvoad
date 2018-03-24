@@ -24,10 +24,15 @@ Can see publicly 'safe' data
 - Admins should securely be able to pull all info from database (CSV);
 
 ## Tech Used
-- SQL / Firebase;
-- Survey Analysis Package;
-- Form validation Package;
-- Google Authenticator;
+- MySQL;
+- Form Validation;
+- Express
+- Body-parser
+- Handlebars
+- CSS Grid
+- Javascript
+- NPM
+- Node
 
 ## Architecture Diagram
 ![Architecture Diagram](public/assets/media/archSS.png)
